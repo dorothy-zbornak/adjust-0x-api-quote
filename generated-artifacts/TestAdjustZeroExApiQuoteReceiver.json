@@ -1,0 +1,1016 @@
+{
+	"schemaVersion": "2.0.0",
+	"contractName": "TestAdjustZeroExApiQuoteReceiver",
+	"compilerOutput": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "makerAssetFillAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					}
+				],
+				"name": "MarketBuyOrdersFillOrKill",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "makerAssetBuyAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "ethFeeAmounts",
+						"type": "uint256[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "address payable[]",
+						"name": "feeRecipients",
+						"type": "address[]"
+					}
+				],
+				"name": "MarketBuyOrdersWithEth",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "ethSellAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "ethFeeAmounts",
+						"type": "uint256[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "address payable[]",
+						"name": "feeRecipients",
+						"type": "address[]"
+					}
+				],
+				"name": "MarketSellAmountWithEth",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "takerAssetFillAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					}
+				],
+				"name": "MarketSellOrdersFillOrKill",
+				"type": "event"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "makerAssetFillAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					}
+				],
+				"name": "marketBuyOrdersFillOrKill",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "makerAssetFilledAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetFilledAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFeePaid",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFeePaid",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "protocolFeePaid",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct LibFillResults.FillResults",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "makerAssetBuyAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "ethFeeAmounts",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "address payable[]",
+						"name": "feeRecipients",
+						"type": "address[]"
+					}
+				],
+				"name": "marketBuyOrdersWithEth",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ethSellAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "ethFeeAmounts",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "address payable[]",
+						"name": "feeRecipients",
+						"type": "address[]"
+					}
+				],
+				"name": "marketSellAmountWithEth",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "makerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "takerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "feeRecipientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "senderAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFee",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationTimeSeconds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "makerFeeAssetData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "takerFeeAssetData",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct LibOrder.Order[]",
+						"name": "orders",
+						"type": "tuple[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "takerAssetFillAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "signatures",
+						"type": "bytes[]"
+					}
+				],
+				"name": "marketSellOrdersFillOrKill",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "makerAssetFilledAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerAssetFilledAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "makerFeePaid",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerFeePaid",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "protocolFeePaid",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct LibFillResults.FillResults",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"evm": {
+			"bytecode": {
+				"linkReferences": {},
+				"object": "0x608060405234801561001057600080fd5b5061089b806100206000396000f3fe60806040526004361061003f5760003560e01c80638bc8efb314610044578063939ce6ba1461006d5780639e8323151461008e578063a6c3bf33146100a1575b600080fd5b610057610052366004610266565b6100b4565b604051610064919061076b565b60405180910390f35b61008061007b3660046102dd565b610104565b6040516100649291906107a5565b61008061009c3660046102dd565b61015c565b6100576100af366004610266565b61019e565b6100bc6101dd565b7f1f5648a9029845c4761cfcc20c17a2c7a315464d6e0f57f3fb108820f2ddc19586868686866040516100f395949392919061065e565b60405180910390a195945050505050565b6000807fa95dd736cfb842736454ca3f7fdb742278cefd9f879ed528e920927be71d59c38b8b8b8b8b8b8b8b8b60405161014699989796959493929190610697565b60405180910390a1995099975050505050505050565b6000807faf5574adf8130f111f97c1e4f8626f0b1c3522635819536c6d162fa7e5ec3c6a8b8b8b8b8b8b8b8b8b60405161014699989796959493929190610697565b6101a66101dd565b7fffcfcafc74a2e0b9eeecb2440e1ca5e16b51b1e5e57c00c947291426e694f4b086868686866040516100f395949392919061065e565b6040518060a0016040528060008152602001600081526020016000815260200160008152602001600081525090565b803561021781610833565b92915050565b60008083601f84011261022e578182fd5b50813567ffffffffffffffff811115610245578182fd5b602083019150836020808302850101111561025f57600080fd5b9250929050565b60008060008060006060868803121561027d578081fd5b853567ffffffffffffffff80821115610294578283fd5b6102a089838a0161021d565b90975095506020880135945060408801359150808211156102bf578283fd5b506102cc8882890161021d565b969995985093965092949392505050565b600080600080600080600080600060a08a8c0312156102fa578384fd5b893567ffffffffffffffff80821115610311578586fd5b61031d8d838e0161021d565b909b50995060208c0135985060408c013591508082111561033c578586fd5b6103488d838e0161021d565b909850965060608c0135915080821115610360578586fd5b61036c8d838e0161021d565b909650945060808c0135915080821115610384578384fd5b506103918c828d0161021d565b8194508093505050509295985092959850929598565b73ffffffffffffffffffffffffffffffffffffffff16815260200190565b73ffffffffffffffffffffffffffffffffffffffff169052565b60008284526020840180819550602085028101915083835b8681101561043157828403885261040e82876107d0565b610419868284610616565b60209a8b019a909650939093019250506001016103f7565b50919695505050505050565b8183526020808401936000918085028201810184845b87811015610609577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe085840301895281357ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe418836030181126104b3578687fd5b6101c09088018581016104cf866104ca838561020c565b6103c5565b6104d981836107bc565b6104e5888801826103c5565b50506104f460408201826107bc565b61050160408701826103c5565b5061050f60608201826107bc565b61051c60608701826103c5565b506080810135608086015260a081013560a086015260c081013560c086015260e081013560e086015261010080820135818701525061012080820135818701525061014061056c818301836107d0565b848389015261057e8589018284610616565b925050506101609250610593838301836107d0565b878303858901526105a5838284610616565b94505050506101806105b9818301836107d0565b878503838901526105cb858284610616565b925050506101a092506105e0838301836107d0565b878303858901526105f2838284610616565b9d89019d9750505093860193505050600101610453565b5090979650505050505050565b600082845282826020860137806020848601015260207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f85011685010190509392505050565b60006060825261067260608301878961043d565b856020840152828103604084015261068b8185876103df565b98975050505050505050565b600060a082526106ab60a083018b8d61043d565b60208a8185015283820360408501526106c5828a8c6103df565b84810360608601528781527f07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8811156106fc578384fd5b81880292508289838301379091018181018381529084900382016080850152908161072786826107b3565b9050869250835b868110156107595782840161074c83610747838861020c565b6103a7565b909450915060010161072e565b509d9c50505050505050505050505050565b600060a082019050825182526020830151602083015260408301516040830152606083015160608301526080830151608083015292915050565b918252602082015260400190565b90815260200190565b600082356107c981610833565b9392505050565b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610804578283fd5b830160208101925035905067ffffffffffffffff81111561082457600080fd5b80360383131561025f57600080fd5b73ffffffffffffffffffffffffffffffffffffffff8116811461085557600080fd5b5056fea365627a7a72315820299bc19b5c1d705cb3eb83a4ba1ce279df2f3d88a84d4fb8b9fbebffc93c9a076c6578706572696d656e74616cf564736f6c63430005110040",
+				"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x89B DUP1 PUSH2 0x20 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x3F JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x8BC8EFB3 EQ PUSH2 0x44 JUMPI DUP1 PUSH4 0x939CE6BA EQ PUSH2 0x6D JUMPI DUP1 PUSH4 0x9E832315 EQ PUSH2 0x8E JUMPI DUP1 PUSH4 0xA6C3BF33 EQ PUSH2 0xA1 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x57 PUSH2 0x52 CALLDATASIZE PUSH1 0x4 PUSH2 0x266 JUMP JUMPDEST PUSH2 0xB4 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x64 SWAP2 SWAP1 PUSH2 0x76B JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x80 PUSH2 0x7B CALLDATASIZE PUSH1 0x4 PUSH2 0x2DD JUMP JUMPDEST PUSH2 0x104 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x64 SWAP3 SWAP2 SWAP1 PUSH2 0x7A5 JUMP JUMPDEST PUSH2 0x80 PUSH2 0x9C CALLDATASIZE PUSH1 0x4 PUSH2 0x2DD JUMP JUMPDEST PUSH2 0x15C JUMP JUMPDEST PUSH2 0x57 PUSH2 0xAF CALLDATASIZE PUSH1 0x4 PUSH2 0x266 JUMP JUMPDEST PUSH2 0x19E JUMP JUMPDEST PUSH2 0xBC PUSH2 0x1DD JUMP JUMPDEST PUSH32 0x1F5648A9029845C4761CFCC20C17A2C7A315464D6E0F57F3FB108820F2DDC195 DUP7 DUP7 DUP7 DUP7 DUP7 PUSH1 0x40 MLOAD PUSH2 0xF3 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x65E JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 SWAP6 SWAP5 POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH32 0xA95DD736CFB842736454CA3F7FDB742278CEFD9F879ED528E920927BE71D59C3 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 PUSH1 0x40 MLOAD PUSH2 0x146 SWAP10 SWAP9 SWAP8 SWAP7 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x697 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 SWAP10 POP SWAP10 SWAP8 POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH32 0xAF5574ADF8130F111F97C1E4F8626F0B1C3522635819536C6D162FA7E5EC3C6A DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 PUSH1 0x40 MLOAD PUSH2 0x146 SWAP10 SWAP9 SWAP8 SWAP7 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x697 JUMP JUMPDEST PUSH2 0x1A6 PUSH2 0x1DD JUMP JUMPDEST PUSH32 0xFFCFCAFC74A2E0B9EEECB2440E1CA5E16B51B1E5E57C00C947291426E694F4B0 DUP7 DUP7 DUP7 DUP7 DUP7 PUSH1 0x40 MLOAD PUSH2 0xF3 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x65E JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 PUSH1 0xA0 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE POP SWAP1 JUMP JUMPDEST DUP1 CALLDATALOAD PUSH2 0x217 DUP2 PUSH2 0x833 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 DUP4 PUSH1 0x1F DUP5 ADD SLT PUSH2 0x22E JUMPI DUP2 DUP3 REVERT JUMPDEST POP DUP2 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP2 GT ISZERO PUSH2 0x245 JUMPI DUP2 DUP3 REVERT JUMPDEST PUSH1 0x20 DUP4 ADD SWAP2 POP DUP4 PUSH1 0x20 DUP1 DUP4 MUL DUP6 ADD ADD GT ISZERO PUSH2 0x25F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP3 POP SWAP3 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP7 DUP9 SUB SLT ISZERO PUSH2 0x27D JUMPI DUP1 DUP2 REVERT JUMPDEST DUP6 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x294 JUMPI DUP3 DUP4 REVERT JUMPDEST PUSH2 0x2A0 DUP10 DUP4 DUP11 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP8 POP SWAP6 POP PUSH1 0x20 DUP9 ADD CALLDATALOAD SWAP5 POP PUSH1 0x40 DUP9 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x2BF JUMPI DUP3 DUP4 REVERT JUMPDEST POP PUSH2 0x2CC DUP9 DUP3 DUP10 ADD PUSH2 0x21D JUMP JUMPDEST SWAP7 SWAP10 SWAP6 SWAP9 POP SWAP4 SWAP7 POP SWAP3 SWAP5 SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0xA0 DUP11 DUP13 SUB SLT ISZERO PUSH2 0x2FA JUMPI DUP4 DUP5 REVERT JUMPDEST DUP10 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x311 JUMPI DUP6 DUP7 REVERT JUMPDEST PUSH2 0x31D DUP14 DUP4 DUP15 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP12 POP SWAP10 POP PUSH1 0x20 DUP13 ADD CALLDATALOAD SWAP9 POP PUSH1 0x40 DUP13 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x33C JUMPI DUP6 DUP7 REVERT JUMPDEST PUSH2 0x348 DUP14 DUP4 DUP15 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP9 POP SWAP7 POP PUSH1 0x60 DUP13 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x360 JUMPI DUP6 DUP7 REVERT JUMPDEST PUSH2 0x36C DUP14 DUP4 DUP15 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP7 POP SWAP5 POP PUSH1 0x80 DUP13 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x384 JUMPI DUP4 DUP5 REVERT JUMPDEST POP PUSH2 0x391 DUP13 DUP3 DUP14 ADD PUSH2 0x21D JUMP JUMPDEST DUP2 SWAP5 POP DUP1 SWAP4 POP POP POP POP SWAP3 SWAP6 SWAP9 POP SWAP3 SWAP6 SWAP9 POP SWAP3 SWAP6 SWAP9 JUMP JUMPDEST PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND DUP2 MSTORE PUSH1 0x20 ADD SWAP1 JUMP JUMPDEST PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND SWAP1 MSTORE JUMP JUMPDEST PUSH1 0x0 DUP3 DUP5 MSTORE PUSH1 0x20 DUP5 ADD DUP1 DUP2 SWAP6 POP PUSH1 0x20 DUP6 MUL DUP2 ADD SWAP2 POP DUP4 DUP4 JUMPDEST DUP7 DUP2 LT ISZERO PUSH2 0x431 JUMPI DUP3 DUP5 SUB DUP9 MSTORE PUSH2 0x40E DUP3 DUP8 PUSH2 0x7D0 JUMP JUMPDEST PUSH2 0x419 DUP7 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST PUSH1 0x20 SWAP11 DUP12 ADD SWAP11 SWAP1 SWAP7 POP SWAP4 SWAP1 SWAP4 ADD SWAP3 POP POP PUSH1 0x1 ADD PUSH2 0x3F7 JUMP JUMPDEST POP SWAP2 SWAP7 SWAP6 POP POP POP POP POP POP JUMP JUMPDEST DUP2 DUP4 MSTORE PUSH1 0x20 DUP1 DUP5 ADD SWAP4 PUSH1 0x0 SWAP2 DUP1 DUP6 MUL DUP3 ADD DUP2 ADD DUP5 DUP5 JUMPDEST DUP8 DUP2 LT ISZERO PUSH2 0x609 JUMPI PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0 DUP6 DUP5 SUB ADD DUP10 MSTORE DUP2 CALLDATALOAD PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE41 DUP9 CALLDATASIZE SUB ADD DUP2 SLT PUSH2 0x4B3 JUMPI DUP7 DUP8 REVERT JUMPDEST PUSH2 0x1C0 SWAP1 DUP9 ADD DUP6 DUP2 ADD PUSH2 0x4CF DUP7 PUSH2 0x4CA DUP4 DUP6 PUSH2 0x20C JUMP JUMPDEST PUSH2 0x3C5 JUMP JUMPDEST PUSH2 0x4D9 DUP2 DUP4 PUSH2 0x7BC JUMP JUMPDEST PUSH2 0x4E5 DUP9 DUP9 ADD DUP3 PUSH2 0x3C5 JUMP JUMPDEST POP POP PUSH2 0x4F4 PUSH1 0x40 DUP3 ADD DUP3 PUSH2 0x7BC JUMP JUMPDEST PUSH2 0x501 PUSH1 0x40 DUP8 ADD DUP3 PUSH2 0x3C5 JUMP JUMPDEST POP PUSH2 0x50F PUSH1 0x60 DUP3 ADD DUP3 PUSH2 0x7BC JUMP JUMPDEST PUSH2 0x51C PUSH1 0x60 DUP8 ADD DUP3 PUSH2 0x3C5 JUMP JUMPDEST POP PUSH1 0x80 DUP2 ADD CALLDATALOAD PUSH1 0x80 DUP7 ADD MSTORE PUSH1 0xA0 DUP2 ADD CALLDATALOAD PUSH1 0xA0 DUP7 ADD MSTORE PUSH1 0xC0 DUP2 ADD CALLDATALOAD PUSH1 0xC0 DUP7 ADD MSTORE PUSH1 0xE0 DUP2 ADD CALLDATALOAD PUSH1 0xE0 DUP7 ADD MSTORE PUSH2 0x100 DUP1 DUP3 ADD CALLDATALOAD DUP2 DUP8 ADD MSTORE POP PUSH2 0x120 DUP1 DUP3 ADD CALLDATALOAD DUP2 DUP8 ADD MSTORE POP PUSH2 0x140 PUSH2 0x56C DUP2 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP5 DUP4 DUP10 ADD MSTORE PUSH2 0x57E DUP6 DUP10 ADD DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP3 POP POP POP PUSH2 0x160 SWAP3 POP PUSH2 0x593 DUP4 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP8 DUP4 SUB DUP6 DUP10 ADD MSTORE PUSH2 0x5A5 DUP4 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP5 POP POP POP POP PUSH2 0x180 PUSH2 0x5B9 DUP2 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP8 DUP6 SUB DUP4 DUP10 ADD MSTORE PUSH2 0x5CB DUP6 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP3 POP POP POP PUSH2 0x1A0 SWAP3 POP PUSH2 0x5E0 DUP4 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP8 DUP4 SUB DUP6 DUP10 ADD MSTORE PUSH2 0x5F2 DUP4 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP14 DUP10 ADD SWAP14 SWAP8 POP POP POP SWAP4 DUP7 ADD SWAP4 POP POP POP PUSH1 0x1 ADD PUSH2 0x453 JUMP JUMPDEST POP SWAP1 SWAP8 SWAP7 POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP3 DUP5 MSTORE DUP3 DUP3 PUSH1 0x20 DUP7 ADD CALLDATACOPY DUP1 PUSH1 0x20 DUP5 DUP7 ADD ADD MSTORE PUSH1 0x20 PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0 PUSH1 0x1F DUP6 ADD AND DUP6 ADD ADD SWAP1 POP SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x60 DUP3 MSTORE PUSH2 0x672 PUSH1 0x60 DUP4 ADD DUP8 DUP10 PUSH2 0x43D JUMP JUMPDEST DUP6 PUSH1 0x20 DUP5 ADD MSTORE DUP3 DUP2 SUB PUSH1 0x40 DUP5 ADD MSTORE PUSH2 0x68B DUP2 DUP6 DUP8 PUSH2 0x3DF JUMP JUMPDEST SWAP9 SWAP8 POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xA0 DUP3 MSTORE PUSH2 0x6AB PUSH1 0xA0 DUP4 ADD DUP12 DUP14 PUSH2 0x43D JUMP JUMPDEST PUSH1 0x20 DUP11 DUP2 DUP6 ADD MSTORE DUP4 DUP3 SUB PUSH1 0x40 DUP6 ADD MSTORE PUSH2 0x6C5 DUP3 DUP11 DUP13 PUSH2 0x3DF JUMP JUMPDEST DUP5 DUP2 SUB PUSH1 0x60 DUP7 ADD MSTORE DUP8 DUP2 MSTORE PUSH32 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF DUP9 GT ISZERO PUSH2 0x6FC JUMPI DUP4 DUP5 REVERT JUMPDEST DUP2 DUP9 MUL SWAP3 POP DUP3 DUP10 DUP4 DUP4 ADD CALLDATACOPY SWAP1 SWAP2 ADD DUP2 DUP2 ADD DUP4 DUP2 MSTORE SWAP1 DUP5 SWAP1 SUB DUP3 ADD PUSH1 0x80 DUP6 ADD MSTORE SWAP1 DUP2 PUSH2 0x727 DUP7 DUP3 PUSH2 0x7B3 JUMP JUMPDEST SWAP1 POP DUP7 SWAP3 POP DUP4 JUMPDEST DUP7 DUP2 LT ISZERO PUSH2 0x759 JUMPI DUP3 DUP5 ADD PUSH2 0x74C DUP4 PUSH2 0x747 DUP4 DUP9 PUSH2 0x20C JUMP JUMPDEST PUSH2 0x3A7 JUMP JUMPDEST SWAP1 SWAP5 POP SWAP2 POP PUSH1 0x1 ADD PUSH2 0x72E JUMP JUMPDEST POP SWAP14 SWAP13 POP POP POP POP POP POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xA0 DUP3 ADD SWAP1 POP DUP3 MLOAD DUP3 MSTORE PUSH1 0x20 DUP4 ADD MLOAD PUSH1 0x20 DUP4 ADD MSTORE PUSH1 0x40 DUP4 ADD MLOAD PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x60 DUP4 ADD MLOAD PUSH1 0x60 DUP4 ADD MSTORE PUSH1 0x80 DUP4 ADD MLOAD PUSH1 0x80 DUP4 ADD MSTORE SWAP3 SWAP2 POP POP JUMP JUMPDEST SWAP2 DUP3 MSTORE PUSH1 0x20 DUP3 ADD MSTORE PUSH1 0x40 ADD SWAP1 JUMP JUMPDEST SWAP1 DUP2 MSTORE PUSH1 0x20 ADD SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP3 CALLDATALOAD PUSH2 0x7C9 DUP2 PUSH2 0x833 JUMP JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 DUP4 CALLDATALOAD PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1 DUP5 CALLDATASIZE SUB ADD DUP2 SLT PUSH2 0x804 JUMPI DUP3 DUP4 REVERT JUMPDEST DUP4 ADD PUSH1 0x20 DUP2 ADD SWAP3 POP CALLDATALOAD SWAP1 POP PUSH8 0xFFFFFFFFFFFFFFFF DUP2 GT ISZERO PUSH2 0x824 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATASIZE SUB DUP4 SGT ISZERO PUSH2 0x25F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF DUP2 AND DUP2 EQ PUSH2 0x855 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP JUMP INVALID LOG3 PUSH6 0x627A7A723158 KECCAK256 0x29 SWAP12 0xC1 SWAP12 0x5C SAR PUSH17 0x5CB3EB83A4BA1CE279DF2F3D88A84D4FB8 0xB9 0xFB 0xEB SELFDESTRUCT 0xC9 EXTCODECOPY SWAP11 SMOD PUSH13 0x6578706572696D656E74616CF5 PUSH5 0x736F6C6343 STOP SDIV GT STOP BLOCKHASH ",
+				"sourceMap": "190:2572:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;190:2572:2;;;;;;;"
+			},
+			"deployedBytecode": {
+				"linkReferences": {},
+				"object": "0x60806040526004361061003f5760003560e01c80638bc8efb314610044578063939ce6ba1461006d5780639e8323151461008e578063a6c3bf33146100a1575b600080fd5b610057610052366004610266565b6100b4565b604051610064919061076b565b60405180910390f35b61008061007b3660046102dd565b610104565b6040516100649291906107a5565b61008061009c3660046102dd565b61015c565b6100576100af366004610266565b61019e565b6100bc6101dd565b7f1f5648a9029845c4761cfcc20c17a2c7a315464d6e0f57f3fb108820f2ddc19586868686866040516100f395949392919061065e565b60405180910390a195945050505050565b6000807fa95dd736cfb842736454ca3f7fdb742278cefd9f879ed528e920927be71d59c38b8b8b8b8b8b8b8b8b60405161014699989796959493929190610697565b60405180910390a1995099975050505050505050565b6000807faf5574adf8130f111f97c1e4f8626f0b1c3522635819536c6d162fa7e5ec3c6a8b8b8b8b8b8b8b8b8b60405161014699989796959493929190610697565b6101a66101dd565b7fffcfcafc74a2e0b9eeecb2440e1ca5e16b51b1e5e57c00c947291426e694f4b086868686866040516100f395949392919061065e565b6040518060a0016040528060008152602001600081526020016000815260200160008152602001600081525090565b803561021781610833565b92915050565b60008083601f84011261022e578182fd5b50813567ffffffffffffffff811115610245578182fd5b602083019150836020808302850101111561025f57600080fd5b9250929050565b60008060008060006060868803121561027d578081fd5b853567ffffffffffffffff80821115610294578283fd5b6102a089838a0161021d565b90975095506020880135945060408801359150808211156102bf578283fd5b506102cc8882890161021d565b969995985093965092949392505050565b600080600080600080600080600060a08a8c0312156102fa578384fd5b893567ffffffffffffffff80821115610311578586fd5b61031d8d838e0161021d565b909b50995060208c0135985060408c013591508082111561033c578586fd5b6103488d838e0161021d565b909850965060608c0135915080821115610360578586fd5b61036c8d838e0161021d565b909650945060808c0135915080821115610384578384fd5b506103918c828d0161021d565b8194508093505050509295985092959850929598565b73ffffffffffffffffffffffffffffffffffffffff16815260200190565b73ffffffffffffffffffffffffffffffffffffffff169052565b60008284526020840180819550602085028101915083835b8681101561043157828403885261040e82876107d0565b610419868284610616565b60209a8b019a909650939093019250506001016103f7565b50919695505050505050565b8183526020808401936000918085028201810184845b87811015610609577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe085840301895281357ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe418836030181126104b3578687fd5b6101c09088018581016104cf866104ca838561020c565b6103c5565b6104d981836107bc565b6104e5888801826103c5565b50506104f460408201826107bc565b61050160408701826103c5565b5061050f60608201826107bc565b61051c60608701826103c5565b506080810135608086015260a081013560a086015260c081013560c086015260e081013560e086015261010080820135818701525061012080820135818701525061014061056c818301836107d0565b848389015261057e8589018284610616565b925050506101609250610593838301836107d0565b878303858901526105a5838284610616565b94505050506101806105b9818301836107d0565b878503838901526105cb858284610616565b925050506101a092506105e0838301836107d0565b878303858901526105f2838284610616565b9d89019d9750505093860193505050600101610453565b5090979650505050505050565b600082845282826020860137806020848601015260207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f85011685010190509392505050565b60006060825261067260608301878961043d565b856020840152828103604084015261068b8185876103df565b98975050505050505050565b600060a082526106ab60a083018b8d61043d565b60208a8185015283820360408501526106c5828a8c6103df565b84810360608601528781527f07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8811156106fc578384fd5b81880292508289838301379091018181018381529084900382016080850152908161072786826107b3565b9050869250835b868110156107595782840161074c83610747838861020c565b6103a7565b909450915060010161072e565b509d9c50505050505050505050505050565b600060a082019050825182526020830151602083015260408301516040830152606083015160608301526080830151608083015292915050565b918252602082015260400190565b90815260200190565b600082356107c981610833565b9392505050565b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610804578283fd5b830160208101925035905067ffffffffffffffff81111561082457600080fd5b80360383131561025f57600080fd5b73ffffffffffffffffffffffffffffffffffffffff8116811461085557600080fd5b5056fea365627a7a72315820299bc19b5c1d705cb3eb83a4ba1ce279df2f3d88a84d4fb8b9fbebffc93c9a076c6578706572696d656e74616cf564736f6c63430005110040",
+				"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x3F JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x8BC8EFB3 EQ PUSH2 0x44 JUMPI DUP1 PUSH4 0x939CE6BA EQ PUSH2 0x6D JUMPI DUP1 PUSH4 0x9E832315 EQ PUSH2 0x8E JUMPI DUP1 PUSH4 0xA6C3BF33 EQ PUSH2 0xA1 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x57 PUSH2 0x52 CALLDATASIZE PUSH1 0x4 PUSH2 0x266 JUMP JUMPDEST PUSH2 0xB4 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x64 SWAP2 SWAP1 PUSH2 0x76B JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x80 PUSH2 0x7B CALLDATASIZE PUSH1 0x4 PUSH2 0x2DD JUMP JUMPDEST PUSH2 0x104 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x64 SWAP3 SWAP2 SWAP1 PUSH2 0x7A5 JUMP JUMPDEST PUSH2 0x80 PUSH2 0x9C CALLDATASIZE PUSH1 0x4 PUSH2 0x2DD JUMP JUMPDEST PUSH2 0x15C JUMP JUMPDEST PUSH2 0x57 PUSH2 0xAF CALLDATASIZE PUSH1 0x4 PUSH2 0x266 JUMP JUMPDEST PUSH2 0x19E JUMP JUMPDEST PUSH2 0xBC PUSH2 0x1DD JUMP JUMPDEST PUSH32 0x1F5648A9029845C4761CFCC20C17A2C7A315464D6E0F57F3FB108820F2DDC195 DUP7 DUP7 DUP7 DUP7 DUP7 PUSH1 0x40 MLOAD PUSH2 0xF3 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x65E JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 SWAP6 SWAP5 POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH32 0xA95DD736CFB842736454CA3F7FDB742278CEFD9F879ED528E920927BE71D59C3 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 PUSH1 0x40 MLOAD PUSH2 0x146 SWAP10 SWAP9 SWAP8 SWAP7 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x697 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 SWAP10 POP SWAP10 SWAP8 POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH32 0xAF5574ADF8130F111F97C1E4F8626F0B1C3522635819536C6D162FA7E5EC3C6A DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 DUP12 PUSH1 0x40 MLOAD PUSH2 0x146 SWAP10 SWAP9 SWAP8 SWAP7 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x697 JUMP JUMPDEST PUSH2 0x1A6 PUSH2 0x1DD JUMP JUMPDEST PUSH32 0xFFCFCAFC74A2E0B9EEECB2440E1CA5E16B51B1E5E57C00C947291426E694F4B0 DUP7 DUP7 DUP7 DUP7 DUP7 PUSH1 0x40 MLOAD PUSH2 0xF3 SWAP6 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x65E JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 PUSH1 0xA0 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x0 DUP2 MSTORE POP SWAP1 JUMP JUMPDEST DUP1 CALLDATALOAD PUSH2 0x217 DUP2 PUSH2 0x833 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 DUP4 PUSH1 0x1F DUP5 ADD SLT PUSH2 0x22E JUMPI DUP2 DUP3 REVERT JUMPDEST POP DUP2 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP2 GT ISZERO PUSH2 0x245 JUMPI DUP2 DUP3 REVERT JUMPDEST PUSH1 0x20 DUP4 ADD SWAP2 POP DUP4 PUSH1 0x20 DUP1 DUP4 MUL DUP6 ADD ADD GT ISZERO PUSH2 0x25F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP3 POP SWAP3 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP7 DUP9 SUB SLT ISZERO PUSH2 0x27D JUMPI DUP1 DUP2 REVERT JUMPDEST DUP6 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x294 JUMPI DUP3 DUP4 REVERT JUMPDEST PUSH2 0x2A0 DUP10 DUP4 DUP11 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP8 POP SWAP6 POP PUSH1 0x20 DUP9 ADD CALLDATALOAD SWAP5 POP PUSH1 0x40 DUP9 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x2BF JUMPI DUP3 DUP4 REVERT JUMPDEST POP PUSH2 0x2CC DUP9 DUP3 DUP10 ADD PUSH2 0x21D JUMP JUMPDEST SWAP7 SWAP10 SWAP6 SWAP9 POP SWAP4 SWAP7 POP SWAP3 SWAP5 SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0xA0 DUP11 DUP13 SUB SLT ISZERO PUSH2 0x2FA JUMPI DUP4 DUP5 REVERT JUMPDEST DUP10 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x311 JUMPI DUP6 DUP7 REVERT JUMPDEST PUSH2 0x31D DUP14 DUP4 DUP15 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP12 POP SWAP10 POP PUSH1 0x20 DUP13 ADD CALLDATALOAD SWAP9 POP PUSH1 0x40 DUP13 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x33C JUMPI DUP6 DUP7 REVERT JUMPDEST PUSH2 0x348 DUP14 DUP4 DUP15 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP9 POP SWAP7 POP PUSH1 0x60 DUP13 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x360 JUMPI DUP6 DUP7 REVERT JUMPDEST PUSH2 0x36C DUP14 DUP4 DUP15 ADD PUSH2 0x21D JUMP JUMPDEST SWAP1 SWAP7 POP SWAP5 POP PUSH1 0x80 DUP13 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x384 JUMPI DUP4 DUP5 REVERT JUMPDEST POP PUSH2 0x391 DUP13 DUP3 DUP14 ADD PUSH2 0x21D JUMP JUMPDEST DUP2 SWAP5 POP DUP1 SWAP4 POP POP POP POP SWAP3 SWAP6 SWAP9 POP SWAP3 SWAP6 SWAP9 POP SWAP3 SWAP6 SWAP9 JUMP JUMPDEST PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND DUP2 MSTORE PUSH1 0x20 ADD SWAP1 JUMP JUMPDEST PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND SWAP1 MSTORE JUMP JUMPDEST PUSH1 0x0 DUP3 DUP5 MSTORE PUSH1 0x20 DUP5 ADD DUP1 DUP2 SWAP6 POP PUSH1 0x20 DUP6 MUL DUP2 ADD SWAP2 POP DUP4 DUP4 JUMPDEST DUP7 DUP2 LT ISZERO PUSH2 0x431 JUMPI DUP3 DUP5 SUB DUP9 MSTORE PUSH2 0x40E DUP3 DUP8 PUSH2 0x7D0 JUMP JUMPDEST PUSH2 0x419 DUP7 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST PUSH1 0x20 SWAP11 DUP12 ADD SWAP11 SWAP1 SWAP7 POP SWAP4 SWAP1 SWAP4 ADD SWAP3 POP POP PUSH1 0x1 ADD PUSH2 0x3F7 JUMP JUMPDEST POP SWAP2 SWAP7 SWAP6 POP POP POP POP POP POP JUMP JUMPDEST DUP2 DUP4 MSTORE PUSH1 0x20 DUP1 DUP5 ADD SWAP4 PUSH1 0x0 SWAP2 DUP1 DUP6 MUL DUP3 ADD DUP2 ADD DUP5 DUP5 JUMPDEST DUP8 DUP2 LT ISZERO PUSH2 0x609 JUMPI PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0 DUP6 DUP5 SUB ADD DUP10 MSTORE DUP2 CALLDATALOAD PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE41 DUP9 CALLDATASIZE SUB ADD DUP2 SLT PUSH2 0x4B3 JUMPI DUP7 DUP8 REVERT JUMPDEST PUSH2 0x1C0 SWAP1 DUP9 ADD DUP6 DUP2 ADD PUSH2 0x4CF DUP7 PUSH2 0x4CA DUP4 DUP6 PUSH2 0x20C JUMP JUMPDEST PUSH2 0x3C5 JUMP JUMPDEST PUSH2 0x4D9 DUP2 DUP4 PUSH2 0x7BC JUMP JUMPDEST PUSH2 0x4E5 DUP9 DUP9 ADD DUP3 PUSH2 0x3C5 JUMP JUMPDEST POP POP PUSH2 0x4F4 PUSH1 0x40 DUP3 ADD DUP3 PUSH2 0x7BC JUMP JUMPDEST PUSH2 0x501 PUSH1 0x40 DUP8 ADD DUP3 PUSH2 0x3C5 JUMP JUMPDEST POP PUSH2 0x50F PUSH1 0x60 DUP3 ADD DUP3 PUSH2 0x7BC JUMP JUMPDEST PUSH2 0x51C PUSH1 0x60 DUP8 ADD DUP3 PUSH2 0x3C5 JUMP JUMPDEST POP PUSH1 0x80 DUP2 ADD CALLDATALOAD PUSH1 0x80 DUP7 ADD MSTORE PUSH1 0xA0 DUP2 ADD CALLDATALOAD PUSH1 0xA0 DUP7 ADD MSTORE PUSH1 0xC0 DUP2 ADD CALLDATALOAD PUSH1 0xC0 DUP7 ADD MSTORE PUSH1 0xE0 DUP2 ADD CALLDATALOAD PUSH1 0xE0 DUP7 ADD MSTORE PUSH2 0x100 DUP1 DUP3 ADD CALLDATALOAD DUP2 DUP8 ADD MSTORE POP PUSH2 0x120 DUP1 DUP3 ADD CALLDATALOAD DUP2 DUP8 ADD MSTORE POP PUSH2 0x140 PUSH2 0x56C DUP2 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP5 DUP4 DUP10 ADD MSTORE PUSH2 0x57E DUP6 DUP10 ADD DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP3 POP POP POP PUSH2 0x160 SWAP3 POP PUSH2 0x593 DUP4 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP8 DUP4 SUB DUP6 DUP10 ADD MSTORE PUSH2 0x5A5 DUP4 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP5 POP POP POP POP PUSH2 0x180 PUSH2 0x5B9 DUP2 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP8 DUP6 SUB DUP4 DUP10 ADD MSTORE PUSH2 0x5CB DUP6 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP3 POP POP POP PUSH2 0x1A0 SWAP3 POP PUSH2 0x5E0 DUP4 DUP4 ADD DUP4 PUSH2 0x7D0 JUMP JUMPDEST DUP8 DUP4 SUB DUP6 DUP10 ADD MSTORE PUSH2 0x5F2 DUP4 DUP3 DUP5 PUSH2 0x616 JUMP JUMPDEST SWAP14 DUP10 ADD SWAP14 SWAP8 POP POP POP SWAP4 DUP7 ADD SWAP4 POP POP POP PUSH1 0x1 ADD PUSH2 0x453 JUMP JUMPDEST POP SWAP1 SWAP8 SWAP7 POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP3 DUP5 MSTORE DUP3 DUP3 PUSH1 0x20 DUP7 ADD CALLDATACOPY DUP1 PUSH1 0x20 DUP5 DUP7 ADD ADD MSTORE PUSH1 0x20 PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0 PUSH1 0x1F DUP6 ADD AND DUP6 ADD ADD SWAP1 POP SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x60 DUP3 MSTORE PUSH2 0x672 PUSH1 0x60 DUP4 ADD DUP8 DUP10 PUSH2 0x43D JUMP JUMPDEST DUP6 PUSH1 0x20 DUP5 ADD MSTORE DUP3 DUP2 SUB PUSH1 0x40 DUP5 ADD MSTORE PUSH2 0x68B DUP2 DUP6 DUP8 PUSH2 0x3DF JUMP JUMPDEST SWAP9 SWAP8 POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xA0 DUP3 MSTORE PUSH2 0x6AB PUSH1 0xA0 DUP4 ADD DUP12 DUP14 PUSH2 0x43D JUMP JUMPDEST PUSH1 0x20 DUP11 DUP2 DUP6 ADD MSTORE DUP4 DUP3 SUB PUSH1 0x40 DUP6 ADD MSTORE PUSH2 0x6C5 DUP3 DUP11 DUP13 PUSH2 0x3DF JUMP JUMPDEST DUP5 DUP2 SUB PUSH1 0x60 DUP7 ADD MSTORE DUP8 DUP2 MSTORE PUSH32 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF DUP9 GT ISZERO PUSH2 0x6FC JUMPI DUP4 DUP5 REVERT JUMPDEST DUP2 DUP9 MUL SWAP3 POP DUP3 DUP10 DUP4 DUP4 ADD CALLDATACOPY SWAP1 SWAP2 ADD DUP2 DUP2 ADD DUP4 DUP2 MSTORE SWAP1 DUP5 SWAP1 SUB DUP3 ADD PUSH1 0x80 DUP6 ADD MSTORE SWAP1 DUP2 PUSH2 0x727 DUP7 DUP3 PUSH2 0x7B3 JUMP JUMPDEST SWAP1 POP DUP7 SWAP3 POP DUP4 JUMPDEST DUP7 DUP2 LT ISZERO PUSH2 0x759 JUMPI DUP3 DUP5 ADD PUSH2 0x74C DUP4 PUSH2 0x747 DUP4 DUP9 PUSH2 0x20C JUMP JUMPDEST PUSH2 0x3A7 JUMP JUMPDEST SWAP1 SWAP5 POP SWAP2 POP PUSH1 0x1 ADD PUSH2 0x72E JUMP JUMPDEST POP SWAP14 SWAP13 POP POP POP POP POP POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xA0 DUP3 ADD SWAP1 POP DUP3 MLOAD DUP3 MSTORE PUSH1 0x20 DUP4 ADD MLOAD PUSH1 0x20 DUP4 ADD MSTORE PUSH1 0x40 DUP4 ADD MLOAD PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x60 DUP4 ADD MLOAD PUSH1 0x60 DUP4 ADD MSTORE PUSH1 0x80 DUP4 ADD MLOAD PUSH1 0x80 DUP4 ADD MSTORE SWAP3 SWAP2 POP POP JUMP JUMPDEST SWAP2 DUP3 MSTORE PUSH1 0x20 DUP3 ADD MSTORE PUSH1 0x40 ADD SWAP1 JUMP JUMPDEST SWAP1 DUP2 MSTORE PUSH1 0x20 ADD SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP3 CALLDATALOAD PUSH2 0x7C9 DUP2 PUSH2 0x833 JUMP JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 DUP4 CALLDATALOAD PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1 DUP5 CALLDATASIZE SUB ADD DUP2 SLT PUSH2 0x804 JUMPI DUP3 DUP4 REVERT JUMPDEST DUP4 ADD PUSH1 0x20 DUP2 ADD SWAP3 POP CALLDATALOAD SWAP1 POP PUSH8 0xFFFFFFFFFFFFFFFF DUP2 GT ISZERO PUSH2 0x824 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATASIZE SUB DUP4 SGT ISZERO PUSH2 0x25F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF DUP2 AND DUP2 EQ PUSH2 0x855 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP JUMP INVALID LOG3 PUSH6 0x627A7A723158 KECCAK256 0x29 SWAP12 0xC1 SWAP12 0x5C SAR PUSH17 0x5CB3EB83A4BA1CE279DF2F3D88A84D4FB8 0xB9 0xFB 0xEB SELFDESTRUCT 0xC9 EXTCODECOPY SWAP11 SMOD PUSH13 0x6578706572696D656E74616CF5 PUSH5 0x736F6C6343 STOP SDIV GT STOP BLOCKHASH ",
+				"sourceMap": "190:2572:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2378:382;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;980:493;;;;;;;;;:::i;:::-;;;;;;;;;1479:503;;;;;;;;;:::i;1988:384::-;;;;;;;;;:::i;2378:382::-;2586:33;;:::i;:::-;2640:113;2679:6;;2699:20;2733:10;;2640:113;;;;;;;;;;;;;;;;;;;2378:382;;;;;;;:::o;980:493::-;1271:7;1280;1308:158;1345:6;;1365:13;1392:10;;1416:13;;1443;;1308:158;;;;;;;;;;;;;;;;;;;;;;;980:493;;;;;;;;;;;;:::o;1479:503::-;1775:7;1784;1812:163;1848:6;;1868:19;1901:10;;1925:13;;1952;;1812:163;;;;;;;;;;;;;;;1988:384;2197:33;;:::i;:::-;2251:114;2291:6;;2311:20;2345:10;;2251:114;;;;;;;;;;;190:2572;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:130:-1:-;72:20;;97:33;72:20;97:33;;;57:78;;;;;321:360;;;459:3;452:4;444:6;440:17;436:27;426:2;;-1:-1;;467:12;426:2;-1:-1;497:20;;537:18;526:30;;523:2;;;-1:-1;;559:12;523:2;603:4;595:6;591:17;579:29;;654:3;603:4;;638:6;634:17;595:6;620:32;;617:41;614:2;;;671:1;;661:12;614:2;419:262;;;;;;2000:859;;;;;;2236:2;2224:9;2215:7;2211:23;2207:32;2204:2;;;-1:-1;;2242:12;2204:2;2300:17;2287:31;2338:18;;2330:6;2327:30;2324:2;;;-1:-1;;2360:12;2324:2;2398:101;2491:7;2482:6;2471:9;2467:22;2398:101;;;2388:111;;-1:-1;2388:111;-1:-1;2536:2;2575:22;;1930:20;;-1:-1;2672:2;2657:18;;2644:32;;-1:-1;2685:30;;;2682:2;;;-1:-1;;2718:12;2682:2;;2756:87;2835:7;2826:6;2815:9;2811:22;2756:87;;;2198:661;;;;-1:-1;2198:661;;-1:-1;2746:97;;;2198:661;-1:-1;;;2198:661;2866:1439;;;;;;;;;;3214:3;3202:9;3193:7;3189:23;3185:33;3182:2;;;-1:-1;;3221:12;3182:2;3279:17;3266:31;3317:18;;3309:6;3306:30;3303:2;;;-1:-1;;3339:12;3303:2;3377:101;3470:7;3461:6;3450:9;3446:22;3377:101;;;3367:111;;-1:-1;3367:111;-1:-1;3515:2;3554:22;;1930:20;;-1:-1;3651:2;3636:18;;3623:32;;-1:-1;3664:30;;;3661:2;;;-1:-1;;3697:12;3661:2;3735:87;3814:7;3805:6;3794:9;3790:22;3735:87;;;3725:97;;-1:-1;3725:97;-1:-1;3887:2;3872:18;;3859:32;;-1:-1;3900:30;;;3897:2;;;-1:-1;;3933:12;3897:2;3971:80;4043:7;4034:6;4023:9;4019:22;3971:80;;;3961:90;;-1:-1;3961:90;-1:-1;4116:3;4101:19;;4088:33;;-1:-1;4130:30;;;4127:2;;;-1:-1;;4163:12;4127:2;;4201:88;4281:7;4272:6;4261:9;4257:22;4201:88;;;4191:98;;;;;;;;;3176:1129;;;;;;;;;;;;4313:205;19731:42;19720:54;5055:45;;4507:4;4498:14;;4409:109;4978:127;19731:42;19720:54;5055:45;;5049:56;6033:903;;17438:6;17433:3;17426:19;17475:4;17470:3;17466:14;6192:98;;;;17475:4;6347:6;6343:17;6338:3;6334:27;6322:39;;6453:21;-1:-1;6480:417;6505:6;6502:1;6499:13;6480:417;;;6567:9;6561:4;6557:20;6552:3;6545:33;6621:49;6663:6;6654:7;6621:49;;;4648:70;6771:4;6756:13;6741;4648:70;;;17475:4;6876:14;;;;6677:99;;-1:-1;17011:14;;;;;-1:-1;;6527:1;6520:9;6480:417;;;-1:-1;6920:10;;6179:757;-1:-1;;;;;;6179:757;7003:985;17426:19;;;17475:4;17466:14;;;;7003:985;;7355:17;;;7346:27;;;;7479:21;7003:985;7506:443;7531:6;7528:1;7525:13;7506:443;;;7583:20;17470:3;7587:4;7583:20;;7578:3;7571:33;19145:3;19132:17;19189:50;19213:8;19197:14;19193:29;19189:50;19169:18;19165:75;19155:2;;-1:-1;;19244:12;19155:2;10085:6;;19273:33;;18341:12;;;10217:63;10265:14;18315:39;18341:12;19273:33;18315:39;;;10217:63;;;10350:50;10383:16;10376:5;10350:50;;;10406:63;17475:4;10458:3;10454:14;10440:12;10406:63;;;;;10546:50;10590:4;10583:5;10579:16;10572:5;10546:50;;;10602:63;10590:4;10654:3;10650:14;10636:12;10602:63;;;;10736:50;10780:4;10773:5;10769:16;10762:5;10736:50;;;10792:63;10780:4;10844:3;10840:14;10826:12;10792:63;;;;10973:4;10966:5;10962:16;1930:20;10973:4;11037:3;11033:14;13312:37;11166:4;11159:5;11155:16;1930:20;11166:4;11230:3;11226:14;13312:37;11351:4;11344:5;11340:16;1930:20;11351:4;11415:3;11411:14;13312:37;11536:4;11529:5;11525:16;1930:20;11536:4;11600:3;11596:14;13312:37;11734:6;;11727:5;11723:18;1930:20;11734:6;11800:3;11796:16;13312:37;;11919:6;;11912:5;11908:18;1930:20;11919:6;11985:3;11981:16;13312:37;;12135:6;12084:59;12135:6;12128:5;12124:18;12117:5;12084:59;;;10085:6;12135;12167:3;12163:16;12156:40;12211:83;10085:6;10080:3;10076:16;12275:12;12261;12211:83;;;12203:91;;;;12437:6;;;12386:59;12437:6;12430:5;12426:18;12419:5;12386:59;;;12493:3;12487:4;12483:14;12437:6;12469:3;12465:16;12458:40;12513:83;12591:4;12577:12;12563;12513:83;;;12505:91;;;;;12742:6;12691:59;12742:6;12735:5;12731:18;12724:5;12691:59;;;12798:3;12792:4;12788:14;12742:6;12774:3;12770:16;12763:40;12818:83;12896:4;12882:12;12868;12818:83;;;12810:91;;;;13047:6;;;12996:59;13047:6;13040:5;13036:18;13029:5;12996:59;;;13103:3;13097:4;13093:14;13047:6;13079:3;13075:16;13068:40;13123:83;13201:4;13187:12;13173;13123:83;;;7928:14;;;;7702:112;-1:-1;;;17011:14;;;;-1:-1;;;7553:1;7546:9;7506:443;;;-1:-1;7972:10;;7177:811;-1:-1;;;;;;;7177:811;8525:273;;17438:6;17433:3;17426:19;19947:6;19942:3;17475:4;17470:3;17466:14;19924:30;-1:-1;17475:4;19994:6;17470:3;19985:16;;19978:27;17475:4;20103:7;20107:2;8784:6;20087:14;20083:28;17470:3;8753:39;;8746:46;;8611:187;;;;;;13481:875;;13827:2;13848:17;13841:47;13902:158;13827:2;13816:9;13812:18;14046:6;14038;13902:158;;;13342:5;14139:2;14128:9;14124:18;13312:37;14191:9;14185:4;14181:20;14176:2;14165:9;14161:18;14154:48;14216:130;14341:4;14332:6;14324;14216:130;;;14208:138;13798:558;-1:-1;;;;;;;;13798:558;14363:1467;;14901:3;14923:17;14916:47;14977:158;14901:3;14890:9;14886:19;15121:6;15113;14977:158;;;15214:2;13342:5;15214:2;15203:9;15199:18;13312:37;15266:9;15260:4;15256:20;15251:2;15240:9;15236:18;15229:48;15291:130;15416:4;15407:6;15399;15291:130;;;15469:9;15463:4;15459:20;15454:2;15443:9;15439:18;15432:48;17438:6;17433:3;17426:19;8286:66;8278:6;8275:78;8272:2;;;-1:-1;;8356:12;8272:2;15214;8391:6;8387:17;8377:27;;19947:6;19942:3;15214:2;17470:3;17466:14;19924:30;19985:16;;;;;;19978:27;;;15651:20;;;;;;15645:3;15630:19;;15623:49;19985:16;;5439:94;5526:6;19985:16;5439:94;;;5432:101;;5626:21;;;-1:-1;5653:323;5678:6;5675:1;5672:13;5653:323;;;15214:2;5782:6;18485:12;5803:79;5878:3;18451:47;18485:12;5782:6;18451:47;;;5803:79;;;5889:80;;-1:-1;5796:86;-1:-1;5700:1;5693:9;5653:323;;;-1:-1;15678:142;14872:958;-1:-1;;;;;;;;;;;;;14872:958;15837:326;;16011:3;16000:9;15996:19;15988:27;;9122:16;9116:23;13319:3;13312:37;9305:4;9298:5;9294:16;9288:23;9305:4;9369:3;9365:14;13312:37;9467:4;9460:5;9456:16;9450:23;9467:4;9531:3;9527:14;13312:37;9629:4;9622:5;9618:16;9612:23;9629:4;9693:3;9689:14;13312:37;9794:4;9787:5;9783:16;9777:23;9794:4;9858:3;9854:14;13312:37;15982:181;;;;;16170:324;13312:37;;;16480:2;16465:18;;13312:37;16316:2;16301:18;;16287:207;17300:186;17426:19;;;17475:4;17466:14;;17419:67;18241:119;;85:6;72:20;97:33;124:5;97:33;;;18306:48;18299:61;-1:-1;;;18299:61;18513:497;;;18633:3;18620:17;18677:48;18701:8;18685:14;18681:29;18677:48;18657:18;18653:73;18643:2;;-1:-1;;18730:12;18643:2;18759:33;;18716:4;18848:16;;;-1:-1;18814:19;;-1:-1;18884:18;18873:30;;18870:2;;;18916:1;;18906:12;18870:2;18963:17;18685:14;18943:38;18933:8;18929:53;18926:2;;;18995:1;;18985:12;20124:117;19731:42;20211:5;19720:54;20186:5;20183:35;20173:2;;20232:1;;20222:12;20173:2;20167:74;"
+			}
+		}
+	},
+	"sources": {
+		"test/TestAdjustZeroExApiQuoteReceiver.sol": {
+			"id": 2
+		},
+		"@0x/contracts-exchange-libs/contracts/src/LibOrder.sol": {
+			"id": 6
+		},
+		"@0x/contracts-utils/contracts/src/LibEIP712.sol": {
+			"id": 7
+		},
+		"src/IExchange.sol": {
+			"id": 0
+		},
+		"@0x/contracts-exchange-libs/contracts/src/LibFillResults.sol": {
+			"id": 3
+		},
+		"@0x/contracts-utils/contracts/src/LibSafeMath.sol": {
+			"id": 9
+		},
+		"@0x/contracts-utils/contracts/src/LibRichErrors.sol": {
+			"id": 8
+		},
+		"@0x/contracts-utils/contracts/src/LibSafeMathRichErrors.sol": {
+			"id": 10
+		},
+		"@0x/contracts-exchange-libs/contracts/src/LibMath.sol": {
+			"id": 4
+		},
+		"@0x/contracts-exchange-libs/contracts/src/LibMathRichErrors.sol": {
+			"id": 5
+		},
+		"src/IForwarder.sol": {
+			"id": 1
+		}
+	},
+	"sourceCodes": {
+		"test/TestAdjustZeroExApiQuoteReceiver.sol": "pragma solidity ^0.5.17;\npragma experimental ABIEncoderV2;\n\nimport \"@0x/contracts-exchange-libs/contracts/src/LibOrder.sol\";\nimport \"../src/IExchange.sol\";\nimport \"../src/IForwarder.sol\";\n\n\ncontract TestAdjustZeroExApiQuoteReceiver is\n    IForwarder,\n    IExchange\n{\n\n    event MarketSellAmountWithEth(\n        LibOrder.Order[] orders,\n        uint256 ethSellAmount,\n        bytes[] signatures,\n        uint256[] ethFeeAmounts,\n        address payable[] feeRecipients\n    );\n\n    event MarketBuyOrdersWithEth(\n        LibOrder.Order[] orders,\n        uint256 makerAssetBuyAmount,\n        bytes[] signatures,\n        uint256[] ethFeeAmounts,\n        address payable[] feeRecipients\n    );\n\n    event MarketSellOrdersFillOrKill(\n        LibOrder.Order[] orders,\n        uint256 takerAssetFillAmount,\n        bytes[] signatures\n    );\n\n    event MarketBuyOrdersFillOrKill(\n        LibOrder.Order[] orders,\n        uint256 makerAssetFillAmount,\n        bytes[] signatures\n    );\n\n    function marketSellAmountWithEth(\n        LibOrder.Order[] calldata orders,\n        uint256 ethSellAmount,\n        bytes[] calldata signatures,\n        uint256[] calldata ethFeeAmounts,\n        address payable[] calldata feeRecipients\n    )\n        external\n        payable\n        returns (uint256, uint256)\n    {\n        emit MarketSellAmountWithEth(\n            orders,\n            ethSellAmount,\n            signatures,\n            ethFeeAmounts,\n            feeRecipients\n        );\n    }\n\n    function marketBuyOrdersWithEth(\n        LibOrder.Order[] calldata orders,\n        uint256 makerAssetBuyAmount,\n        bytes[] calldata signatures,\n        uint256[] calldata ethFeeAmounts,\n        address payable[] calldata feeRecipients\n    )\n        external\n        payable\n        returns (uint256, uint256)\n    {\n        emit MarketBuyOrdersWithEth(\n            orders,\n            makerAssetBuyAmount,\n            signatures,\n            ethFeeAmounts,\n            feeRecipients\n        );\n    }\n\n    function marketSellOrdersFillOrKill(\n        LibOrder.Order[] calldata orders,\n        uint256 takerAssetFillAmount,\n        bytes[] calldata signatures\n    )\n        external\n        payable\n        returns (LibFillResults.FillResults memory)\n    {\n        emit MarketSellOrdersFillOrKill(\n            orders,\n            takerAssetFillAmount,\n            signatures\n        );\n    }\n\n    function marketBuyOrdersFillOrKill(\n        LibOrder.Order[] calldata orders,\n        uint256 makerAssetFillAmount,\n        bytes[] calldata signatures\n    )\n        external\n        payable\n        returns (LibFillResults.FillResults memory)\n    {\n        emit MarketBuyOrdersFillOrKill(\n            orders,\n            makerAssetFillAmount,\n            signatures\n        );\n    }\n}\n",
+		"@0x/contracts-exchange-libs/contracts/src/LibOrder.sol": "/*\n\n  Copyright 2019 ZeroEx Intl.\n\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n\n*/\n\npragma solidity ^0.5.9;\n\nimport \"@0x/contracts-utils/contracts/src/LibEIP712.sol\";\n\n\nlibrary LibOrder {\n\n    using LibOrder for Order;\n\n    // Hash for the EIP712 Order Schema:\n    // keccak256(abi.encodePacked(\n    //     \"Order(\",\n    //     \"address makerAddress,\",\n    //     \"address takerAddress,\",\n    //     \"address feeRecipientAddress,\",\n    //     \"address senderAddress,\",\n    //     \"uint256 makerAssetAmount,\",\n    //     \"uint256 takerAssetAmount,\",\n    //     \"uint256 makerFee,\",\n    //     \"uint256 takerFee,\",\n    //     \"uint256 expirationTimeSeconds,\",\n    //     \"uint256 salt,\",\n    //     \"bytes makerAssetData,\",\n    //     \"bytes takerAssetData,\",\n    //     \"bytes makerFeeAssetData,\",\n    //     \"bytes takerFeeAssetData\",\n    //     \")\"\n    // ))\n    bytes32 constant internal _EIP712_ORDER_SCHEMA_HASH =\n        0xf80322eb8376aafb64eadf8f0d7623f22130fd9491a221e902b713cb984a7534;\n\n    // A valid order remains fillable until it is expired, fully filled, or cancelled.\n    // An order's status is unaffected by external factors, like account balances.\n    enum OrderStatus {\n        INVALID,                     // Default value\n        INVALID_MAKER_ASSET_AMOUNT,  // Order does not have a valid maker asset amount\n        INVALID_TAKER_ASSET_AMOUNT,  // Order does not have a valid taker asset amount\n        FILLABLE,                    // Order is fillable\n        EXPIRED,                     // Order has already expired\n        FULLY_FILLED,                // Order is fully filled\n        CANCELLED                    // Order has been cancelled\n    }\n\n    // solhint-disable max-line-length\n    /// @dev Canonical order structure.\n    struct Order {\n        address makerAddress;           // Address that created the order.\n        address takerAddress;           // Address that is allowed to fill the order. If set to 0, any address is allowed to fill the order.\n        address feeRecipientAddress;    // Address that will recieve fees when order is filled.\n        address senderAddress;          // Address that is allowed to call Exchange contract methods that affect this order. If set to 0, any address is allowed to call these methods.\n        uint256 makerAssetAmount;       // Amount of makerAsset being offered by maker. Must be greater than 0.\n        uint256 takerAssetAmount;       // Amount of takerAsset being bid on by maker. Must be greater than 0.\n        uint256 makerFee;               // Fee paid to feeRecipient by maker when order is filled.\n        uint256 takerFee;               // Fee paid to feeRecipient by taker when order is filled.\n        uint256 expirationTimeSeconds;  // Timestamp in seconds at which order expires.\n        uint256 salt;                   // Arbitrary number to facilitate uniqueness of the order's hash.\n        bytes makerAssetData;           // Encoded data that can be decoded by a specified proxy contract when transferring makerAsset. The leading bytes4 references the id of the asset proxy.\n        bytes takerAssetData;           // Encoded data that can be decoded by a specified proxy contract when transferring takerAsset. The leading bytes4 references the id of the asset proxy.\n        bytes makerFeeAssetData;        // Encoded data that can be decoded by a specified proxy contract when transferring makerFeeAsset. The leading bytes4 references the id of the asset proxy.\n        bytes takerFeeAssetData;        // Encoded data that can be decoded by a specified proxy contract when transferring takerFeeAsset. The leading bytes4 references the id of the asset proxy.\n    }\n    // solhint-enable max-line-length\n\n    /// @dev Order information returned by `getOrderInfo()`.\n    struct OrderInfo {\n        OrderStatus orderStatus;                    // Status that describes order's validity and fillability.\n        bytes32 orderHash;                    // EIP712 typed data hash of the order (see LibOrder.getTypedDataHash).\n        uint256 orderTakerAssetFilledAmount;  // Amount of order that has already been filled.\n    }\n\n    /// @dev Calculates the EIP712 typed data hash of an order with a given domain separator.\n    /// @param order The order structure.\n    /// @return EIP712 typed data hash of the order.\n    function getTypedDataHash(Order memory order, bytes32 eip712ExchangeDomainHash)\n        internal\n        pure\n        returns (bytes32 orderHash)\n    {\n        orderHash = LibEIP712.hashEIP712Message(\n            eip712ExchangeDomainHash,\n            order.getStructHash()\n        );\n        return orderHash;\n    }\n\n    /// @dev Calculates EIP712 hash of the order struct.\n    /// @param order The order structure.\n    /// @return EIP712 hash of the order struct.\n    function getStructHash(Order memory order)\n        internal\n        pure\n        returns (bytes32 result)\n    {\n        bytes32 schemaHash = _EIP712_ORDER_SCHEMA_HASH;\n        bytes memory makerAssetData = order.makerAssetData;\n        bytes memory takerAssetData = order.takerAssetData;\n        bytes memory makerFeeAssetData = order.makerFeeAssetData;\n        bytes memory takerFeeAssetData = order.takerFeeAssetData;\n\n        // Assembly for more efficiently computing:\n        // keccak256(abi.encodePacked(\n        //     EIP712_ORDER_SCHEMA_HASH,\n        //     uint256(order.makerAddress),\n        //     uint256(order.takerAddress),\n        //     uint256(order.feeRecipientAddress),\n        //     uint256(order.senderAddress),\n        //     order.makerAssetAmount,\n        //     order.takerAssetAmount,\n        //     order.makerFee,\n        //     order.takerFee,\n        //     order.expirationTimeSeconds,\n        //     order.salt,\n        //     keccak256(order.makerAssetData),\n        //     keccak256(order.takerAssetData),\n        //     keccak256(order.makerFeeAssetData),\n        //     keccak256(order.takerFeeAssetData)\n        // ));\n\n        assembly {\n            // Assert order offset (this is an internal error that should never be triggered)\n            if lt(order, 32) {\n                invalid()\n            }\n\n            // Calculate memory addresses that will be swapped out before hashing\n            let pos1 := sub(order, 32)\n            let pos2 := add(order, 320)\n            let pos3 := add(order, 352)\n            let pos4 := add(order, 384)\n            let pos5 := add(order, 416)\n\n            // Backup\n            let temp1 := mload(pos1)\n            let temp2 := mload(pos2)\n            let temp3 := mload(pos3)\n            let temp4 := mload(pos4)\n            let temp5 := mload(pos5)\n\n            // Hash in place\n            mstore(pos1, schemaHash)\n            mstore(pos2, keccak256(add(makerAssetData, 32), mload(makerAssetData)))        // store hash of makerAssetData\n            mstore(pos3, keccak256(add(takerAssetData, 32), mload(takerAssetData)))        // store hash of takerAssetData\n            mstore(pos4, keccak256(add(makerFeeAssetData, 32), mload(makerFeeAssetData)))  // store hash of makerFeeAssetData\n            mstore(pos5, keccak256(add(takerFeeAssetData, 32), mload(takerFeeAssetData)))  // store hash of takerFeeAssetData\n            result := keccak256(pos1, 480)\n\n            // Restore\n            mstore(pos1, temp1)\n            mstore(pos2, temp2)\n            mstore(pos3, temp3)\n            mstore(pos4, temp4)\n            mstore(pos5, temp5)\n        }\n        return result;\n    }\n}\n",
+		"@0x/contracts-utils/contracts/src/LibEIP712.sol": "/*\n\n  Copyright 2019 ZeroEx Intl.\n\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n\n*/\n\npragma solidity ^0.5.9;\n\n\nlibrary LibEIP712 {\n\n    // Hash of the EIP712 Domain Separator Schema\n    // keccak256(abi.encodePacked(\n    //     \"EIP712Domain(\",\n    //     \"string name,\",\n    //     \"string version,\",\n    //     \"uint256 chainId,\",\n    //     \"address verifyingContract\",\n    //     \")\"\n    // ))\n    bytes32 constant internal _EIP712_DOMAIN_SEPARATOR_SCHEMA_HASH = 0x8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f;\n\n    /// @dev Calculates a EIP712 domain separator.\n    /// @param name The EIP712 domain name.\n    /// @param version The EIP712 domain version.\n    /// @param verifyingContract The EIP712 verifying contract.\n    /// @return EIP712 domain separator.\n    function hashEIP712Domain(\n        string memory name,\n        string memory version,\n        uint256 chainId,\n        address verifyingContract\n    )\n        internal\n        pure\n        returns (bytes32 result)\n    {\n        bytes32 schemaHash = _EIP712_DOMAIN_SEPARATOR_SCHEMA_HASH;\n\n        // Assembly for more efficient computing:\n        // keccak256(abi.encodePacked(\n        //     _EIP712_DOMAIN_SEPARATOR_SCHEMA_HASH,\n        //     keccak256(bytes(name)),\n        //     keccak256(bytes(version)),\n        //     chainId,\n        //     uint256(verifyingContract)\n        // ))\n\n        assembly {\n            // Calculate hashes of dynamic data\n            let nameHash := keccak256(add(name, 32), mload(name))\n            let versionHash := keccak256(add(version, 32), mload(version))\n\n            // Load free memory pointer\n            let memPtr := mload(64)\n\n            // Store params in memory\n            mstore(memPtr, schemaHash)\n            mstore(add(memPtr, 32), nameHash)\n            mstore(add(memPtr, 64), versionHash)\n            mstore(add(memPtr, 96), chainId)\n            mstore(add(memPtr, 128), verifyingContract)\n\n            // Compute hash\n            result := keccak256(memPtr, 160)\n        }\n        return result;\n    }\n\n    /// @dev Calculates EIP712 encoding for a hash struct with a given domain hash.\n    /// @param eip712DomainHash Hash of the domain domain separator data, computed\n    ///                         with getDomainHash().\n    /// @param hashStruct The EIP712 hash struct.\n    /// @return EIP712 hash applied to the given EIP712 Domain.\n    function hashEIP712Message(bytes32 eip712DomainHash, bytes32 hashStruct)\n        internal\n        pure\n        returns (bytes32 result)\n    {\n        // Assembly for more efficient computing:\n        // keccak256(abi.encodePacked(\n        //     EIP191_HEADER,\n        //     EIP712_DOMAIN_HASH,\n        //     hashStruct\n        // ));\n\n        assembly {\n            // Load free memory pointer\n            let memPtr := mload(64)\n\n            mstore(memPtr, 0x1901000000000000000000000000000000000000000000000000000000000000)  // EIP191 header\n            mstore(add(memPtr, 2), eip712DomainHash)                                            // EIP712 domain hash\n            mstore(add(memPtr, 34), hashStruct)                                                 // Hash of struct\n\n            // Compute hash\n            result := keccak256(memPtr, 66)\n        }\n        return result;\n    }\n}\n",
+		"src/IExchange.sol": "pragma solidity ^0.5.17;\npragma experimental ABIEncoderV2;\n\nimport \"@0x/contracts-exchange-libs/contracts/src/LibOrder.sol\";\nimport \"@0x/contracts-exchange-libs/contracts/src/LibFillResults.sol\";\n\n\ninterface IExchange {\n\n    function marketSellOrdersFillOrKill(\n        LibOrder.Order[] calldata orders,\n        uint256 takerAssetFillAmount,\n        bytes[] calldata signatures\n    )\n        external\n        payable\n        returns (LibFillResults.FillResults memory fillResults);\n\n    function marketBuyOrdersFillOrKill(\n        LibOrder.Order[] calldata orders,\n        uint256 makerAssetFillAmount,\n        bytes[] calldata signatures\n    )\n        external\n        payable\n        returns (LibFillResults.FillResults memory fillResults);\n}\n",
+		"@0x/contracts-exchange-libs/contracts/src/LibFillResults.sol": "/*\n\n  Copyright 2019 ZeroEx Intl.\n\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n\n*/\n\npragma solidity ^0.5.9;\n\nimport \"@0x/contracts-utils/contracts/src/LibSafeMath.sol\";\nimport \"./LibMath.sol\";\nimport \"./LibOrder.sol\";\n\n\nlibrary LibFillResults {\n\n    using LibSafeMath for uint256;\n\n    struct BatchMatchedFillResults {\n        FillResults[] left;              // Fill results for left orders\n        FillResults[] right;             // Fill results for right orders\n        uint256 profitInLeftMakerAsset;  // Profit taken from left makers\n        uint256 profitInRightMakerAsset; // Profit taken from right makers\n    }\n\n    struct FillResults {\n        uint256 makerAssetFilledAmount;  // Total amount of makerAsset(s) filled.\n        uint256 takerAssetFilledAmount;  // Total amount of takerAsset(s) filled.\n        uint256 makerFeePaid;            // Total amount of fees paid by maker(s) to feeRecipient(s).\n        uint256 takerFeePaid;            // Total amount of fees paid by taker to feeRecipients(s).\n        uint256 protocolFeePaid;         // Total amount of fees paid by taker to the staking contract.\n    }\n\n    struct MatchedFillResults {\n        FillResults left;                // Amounts filled and fees paid of left order.\n        FillResults right;               // Amounts filled and fees paid of right order.\n        uint256 profitInLeftMakerAsset;  // Profit taken from the left maker\n        uint256 profitInRightMakerAsset; // Profit taken from the right maker\n    }\n\n    /// @dev Calculates amounts filled and fees paid by maker and taker.\n    /// @param order to be filled.\n    /// @param takerAssetFilledAmount Amount of takerAsset that will be filled.\n    /// @param protocolFeeMultiplier The current protocol fee of the exchange contract.\n    /// @param gasPrice The gasprice of the transaction. This is provided so that the function call can continue\n    ///        to be pure rather than view.\n    /// @return fillResults Amounts filled and fees paid by maker and taker.\n    function calculateFillResults(\n        LibOrder.Order memory order,\n        uint256 takerAssetFilledAmount,\n        uint256 protocolFeeMultiplier,\n        uint256 gasPrice\n    )\n        internal\n        pure\n        returns (FillResults memory fillResults)\n    {\n        // Compute proportional transfer amounts\n        fillResults.takerAssetFilledAmount = takerAssetFilledAmount;\n        fillResults.makerAssetFilledAmount = LibMath.safeGetPartialAmountFloor(\n            takerAssetFilledAmount,\n            order.takerAssetAmount,\n            order.makerAssetAmount\n        );\n        fillResults.makerFeePaid = LibMath.safeGetPartialAmountFloor(\n            takerAssetFilledAmount,\n            order.takerAssetAmount,\n            order.makerFee\n        );\n        fillResults.takerFeePaid = LibMath.safeGetPartialAmountFloor(\n            takerAssetFilledAmount,\n            order.takerAssetAmount,\n            order.takerFee\n        );\n\n        // Compute the protocol fee that should be paid for a single fill.\n        fillResults.protocolFeePaid = gasPrice.safeMul(protocolFeeMultiplier);\n\n        return fillResults;\n    }\n\n    /// @dev Calculates fill amounts for the matched orders.\n    ///      Each order is filled at their respective price point. However, the calculations are\n    ///      carried out as though the orders are both being filled at the right order's price point.\n    ///      The profit made by the leftOrder order goes to the taker (who matched the two orders).\n    /// @param leftOrder First order to match.\n    /// @param rightOrder Second order to match.\n    /// @param leftOrderTakerAssetFilledAmount Amount of left order already filled.\n    /// @param rightOrderTakerAssetFilledAmount Amount of right order already filled.\n    /// @param protocolFeeMultiplier The current protocol fee of the exchange contract.\n    /// @param gasPrice The gasprice of the transaction. This is provided so that the function call can continue\n    ///        to be pure rather than view.\n    /// @param shouldMaximallyFillOrders A value that indicates whether or not this calculation should use\n    ///                                  the maximal fill order matching strategy.\n    /// @param matchedFillResults Amounts to fill and fees to pay by maker and taker of matched orders.\n    function calculateMatchedFillResults(\n        LibOrder.Order memory leftOrder,\n        LibOrder.Order memory rightOrder,\n        uint256 leftOrderTakerAssetFilledAmount,\n        uint256 rightOrderTakerAssetFilledAmount,\n        uint256 protocolFeeMultiplier,\n        uint256 gasPrice,\n        bool shouldMaximallyFillOrders\n    )\n        internal\n        pure\n        returns (MatchedFillResults memory matchedFillResults)\n    {\n        // Derive maker asset amounts for left & right orders, given store taker assert amounts\n        uint256 leftTakerAssetAmountRemaining = leftOrder.takerAssetAmount.safeSub(leftOrderTakerAssetFilledAmount);\n        uint256 leftMakerAssetAmountRemaining = LibMath.safeGetPartialAmountFloor(\n            leftOrder.makerAssetAmount,\n            leftOrder.takerAssetAmount,\n            leftTakerAssetAmountRemaining\n        );\n        uint256 rightTakerAssetAmountRemaining = rightOrder.takerAssetAmount.safeSub(rightOrderTakerAssetFilledAmount);\n        uint256 rightMakerAssetAmountRemaining = LibMath.safeGetPartialAmountFloor(\n            rightOrder.makerAssetAmount,\n            rightOrder.takerAssetAmount,\n            rightTakerAssetAmountRemaining\n        );\n\n        // Maximally fill the orders and pay out profits to the matcher in one or both of the maker assets.\n        if (shouldMaximallyFillOrders) {\n            matchedFillResults = _calculateMatchedFillResultsWithMaximalFill(\n                leftOrder,\n                rightOrder,\n                leftMakerAssetAmountRemaining,\n                leftTakerAssetAmountRemaining,\n                rightMakerAssetAmountRemaining,\n                rightTakerAssetAmountRemaining\n            );\n        } else {\n            matchedFillResults = _calculateMatchedFillResults(\n                leftOrder,\n                rightOrder,\n                leftMakerAssetAmountRemaining,\n                leftTakerAssetAmountRemaining,\n                rightMakerAssetAmountRemaining,\n                rightTakerAssetAmountRemaining\n            );\n        }\n\n        // Compute fees for left order\n        matchedFillResults.left.makerFeePaid = LibMath.safeGetPartialAmountFloor(\n            matchedFillResults.left.makerAssetFilledAmount,\n            leftOrder.makerAssetAmount,\n            leftOrder.makerFee\n        );\n        matchedFillResults.left.takerFeePaid = LibMath.safeGetPartialAmountFloor(\n            matchedFillResults.left.takerAssetFilledAmount,\n            leftOrder.takerAssetAmount,\n            leftOrder.takerFee\n        );\n\n        // Compute fees for right order\n        matchedFillResults.right.makerFeePaid = LibMath.safeGetPartialAmountFloor(\n            matchedFillResults.right.makerAssetFilledAmount,\n            rightOrder.makerAssetAmount,\n            rightOrder.makerFee\n        );\n        matchedFillResults.right.takerFeePaid = LibMath.safeGetPartialAmountFloor(\n            matchedFillResults.right.takerAssetFilledAmount,\n            rightOrder.takerAssetAmount,\n            rightOrder.takerFee\n        );\n\n        // Compute the protocol fee that should be paid for a single fill. In this\n        // case this should be made the protocol fee for both the left and right orders.\n        uint256 protocolFee = gasPrice.safeMul(protocolFeeMultiplier);\n        matchedFillResults.left.protocolFeePaid = protocolFee;\n        matchedFillResults.right.protocolFeePaid = protocolFee;\n\n        // Return fill results\n        return matchedFillResults;\n    }\n\n    /// @dev Adds properties of both FillResults instances.\n    /// @param fillResults1 The first FillResults.\n    /// @param fillResults2 The second FillResults.\n    /// @return The sum of both fill results.\n    function addFillResults(\n        FillResults memory fillResults1,\n        FillResults memory fillResults2\n    )\n        internal\n        pure\n        returns (FillResults memory totalFillResults)\n    {\n        totalFillResults.makerAssetFilledAmount = fillResults1.makerAssetFilledAmount.safeAdd(fillResults2.makerAssetFilledAmount);\n        totalFillResults.takerAssetFilledAmount = fillResults1.takerAssetFilledAmount.safeAdd(fillResults2.takerAssetFilledAmount);\n        totalFillResults.makerFeePaid = fillResults1.makerFeePaid.safeAdd(fillResults2.makerFeePaid);\n        totalFillResults.takerFeePaid = fillResults1.takerFeePaid.safeAdd(fillResults2.takerFeePaid);\n        totalFillResults.protocolFeePaid = fillResults1.protocolFeePaid.safeAdd(fillResults2.protocolFeePaid);\n\n        return totalFillResults;\n    }\n\n    /// @dev Calculates part of the matched fill results for a given situation using the fill strategy that only\n    ///      awards profit denominated in the left maker asset.\n    /// @param leftOrder The left order in the order matching situation.\n    /// @param rightOrder The right order in the order matching situation.\n    /// @param leftMakerAssetAmountRemaining The amount of the left order maker asset that can still be filled.\n    /// @param leftTakerAssetAmountRemaining The amount of the left order taker asset that can still be filled.\n    /// @param rightMakerAssetAmountRemaining The amount of the right order maker asset that can still be filled.\n    /// @param rightTakerAssetAmountRemaining The amount of the right order taker asset that can still be filled.\n    /// @return MatchFillResults struct that does not include fees paid.\n    function _calculateMatchedFillResults(\n        LibOrder.Order memory leftOrder,\n        LibOrder.Order memory rightOrder,\n        uint256 leftMakerAssetAmountRemaining,\n        uint256 leftTakerAssetAmountRemaining,\n        uint256 rightMakerAssetAmountRemaining,\n        uint256 rightTakerAssetAmountRemaining\n    )\n        private\n        pure\n        returns (MatchedFillResults memory matchedFillResults)\n    {\n        // Calculate fill results for maker and taker assets: at least one order will be fully filled.\n        // The maximum amount the left maker can buy is `leftTakerAssetAmountRemaining`\n        // The maximum amount the right maker can sell is `rightMakerAssetAmountRemaining`\n        // We have two distinct cases for calculating the fill results:\n        // Case 1.\n        //   If the left maker can buy more than the right maker can sell, then only the right order is fully filled.\n        //   If the left maker can buy exactly what the right maker can sell, then both orders are fully filled.\n        // Case 2.\n        //   If the left maker cannot buy more than the right maker can sell, then only the left order is fully filled.\n        // Case 3.\n        //   If the left maker can buy exactly as much as the right maker can sell, then both orders are fully filled.\n        if (leftTakerAssetAmountRemaining > rightMakerAssetAmountRemaining) {\n            // Case 1: Right order is fully filled\n            matchedFillResults = _calculateCompleteRightFill(\n                leftOrder,\n                rightMakerAssetAmountRemaining,\n                rightTakerAssetAmountRemaining\n            );\n        } else if (leftTakerAssetAmountRemaining < rightMakerAssetAmountRemaining) {\n            // Case 2: Left order is fully filled\n            matchedFillResults.left.makerAssetFilledAmount = leftMakerAssetAmountRemaining;\n            matchedFillResults.left.takerAssetFilledAmount = leftTakerAssetAmountRemaining;\n            matchedFillResults.right.makerAssetFilledAmount = leftTakerAssetAmountRemaining;\n            // Round up to ensure the maker's exchange rate does not exceed the price specified by the order.\n            // We favor the maker when the exchange rate must be rounded.\n            matchedFillResults.right.takerAssetFilledAmount = LibMath.safeGetPartialAmountCeil(\n                rightOrder.takerAssetAmount,\n                rightOrder.makerAssetAmount,\n                leftTakerAssetAmountRemaining // matchedFillResults.right.makerAssetFilledAmount\n            );\n        } else {\n            // leftTakerAssetAmountRemaining == rightMakerAssetAmountRemaining\n            // Case 3: Both orders are fully filled. Technically, this could be captured by the above cases, but\n            //         this calculation will be more precise since it does not include rounding.\n            matchedFillResults = _calculateCompleteFillBoth(\n                leftMakerAssetAmountRemaining,\n                leftTakerAssetAmountRemaining,\n                rightMakerAssetAmountRemaining,\n                rightTakerAssetAmountRemaining\n            );\n        }\n\n        // Calculate amount given to taker\n        matchedFillResults.profitInLeftMakerAsset = matchedFillResults.left.makerAssetFilledAmount.safeSub(\n            matchedFillResults.right.takerAssetFilledAmount\n        );\n\n        return matchedFillResults;\n    }\n\n    /// @dev Calculates part of the matched fill results for a given situation using the maximal fill order matching\n    ///      strategy.\n    /// @param leftOrder The left order in the order matching situation.\n    /// @param rightOrder The right order in the order matching situation.\n    /// @param leftMakerAssetAmountRemaining The amount of the left order maker asset that can still be filled.\n    /// @param leftTakerAssetAmountRemaining The amount of the left order taker asset that can still be filled.\n    /// @param rightMakerAssetAmountRemaining The amount of the right order maker asset that can still be filled.\n    /// @param rightTakerAssetAmountRemaining The amount of the right order taker asset that can still be filled.\n    /// @return MatchFillResults struct that does not include fees paid.\n    function _calculateMatchedFillResultsWithMaximalFill(\n        LibOrder.Order memory leftOrder,\n        LibOrder.Order memory rightOrder,\n        uint256 leftMakerAssetAmountRemaining,\n        uint256 leftTakerAssetAmountRemaining,\n        uint256 rightMakerAssetAmountRemaining,\n        uint256 rightTakerAssetAmountRemaining\n    )\n        private\n        pure\n        returns (MatchedFillResults memory matchedFillResults)\n    {\n        // If a maker asset is greater than the opposite taker asset, than there will be a spread denominated in that maker asset.\n        bool doesLeftMakerAssetProfitExist = leftMakerAssetAmountRemaining > rightTakerAssetAmountRemaining;\n        bool doesRightMakerAssetProfitExist = rightMakerAssetAmountRemaining > leftTakerAssetAmountRemaining;\n\n        // Calculate the maximum fill results for the maker and taker assets. At least one of the orders will be fully filled.\n        //\n        // The maximum that the left maker can possibly buy is the amount that the right order can sell.\n        // The maximum that the right maker can possibly buy is the amount that the left order can sell.\n        //\n        // If the left order is fully filled, profit will be paid out in the left maker asset. If the right order is fully filled,\n        // the profit will be out in the right maker asset.\n        //\n        // There are three cases to consider:\n        // Case 1.\n        //   If the left maker can buy more than the right maker can sell, then only the right order is fully filled.\n        // Case 2.\n        //   If the right maker can buy more than the left maker can sell, then only the right order is fully filled.\n        // Case 3.\n        //   If the right maker can sell the max of what the left maker can buy and the left maker can sell the max of\n        //   what the right maker can buy, then both orders are fully filled.\n        if (leftTakerAssetAmountRemaining > rightMakerAssetAmountRemaining) {\n            // Case 1: Right order is fully filled with the profit paid in the left makerAsset\n            matchedFillResults = _calculateCompleteRightFill(\n                leftOrder,\n                rightMakerAssetAmountRemaining,\n                rightTakerAssetAmountRemaining\n            );\n        } else if (rightTakerAssetAmountRemaining > leftMakerAssetAmountRemaining) {\n            // Case 2: Left order is fully filled with the profit paid in the right makerAsset.\n            matchedFillResults.left.makerAssetFilledAmount = leftMakerAssetAmountRemaining;\n            matchedFillResults.left.takerAssetFilledAmount = leftTakerAssetAmountRemaining;\n            // Round down to ensure the right maker's exchange rate does not exceed the price specified by the order.\n            // We favor the right maker when the exchange rate must be rounded and the profit is being paid in the\n            // right maker asset.\n            matchedFillResults.right.makerAssetFilledAmount = LibMath.safeGetPartialAmountFloor(\n                rightOrder.makerAssetAmount,\n                rightOrder.takerAssetAmount,\n                leftMakerAssetAmountRemaining\n            );\n            matchedFillResults.right.takerAssetFilledAmount = leftMakerAssetAmountRemaining;\n        } else {\n            // Case 3: The right and left orders are fully filled\n            matchedFillResults = _calculateCompleteFillBoth(\n                leftMakerAssetAmountRemaining,\n                leftTakerAssetAmountRemaining,\n                rightMakerAssetAmountRemaining,\n                rightTakerAssetAmountRemaining\n            );\n        }\n\n        // Calculate amount given to taker in the left order's maker asset if the left spread will be part of the profit.\n        if (doesLeftMakerAssetProfitExist) {\n            matchedFillResults.profitInLeftMakerAsset = matchedFillResults.left.makerAssetFilledAmount.safeSub(\n                matchedFillResults.right.takerAssetFilledAmount\n            );\n        }\n\n        // Calculate amount given to taker in the right order's maker asset if the right spread will be part of the profit.\n        if (doesRightMakerAssetProfitExist) {\n            matchedFillResults.profitInRightMakerAsset = matchedFillResults.right.makerAssetFilledAmount.safeSub(\n                matchedFillResults.left.takerAssetFilledAmount\n            );\n        }\n\n        return matchedFillResults;\n    }\n\n    /// @dev Calculates the fill results for the maker and taker in the order matching and writes the results\n    ///      to the fillResults that are being collected on the order. Both orders will be fully filled in this\n    ///      case.\n    /// @param leftMakerAssetAmountRemaining The amount of the left maker asset that is remaining to be filled.\n    /// @param leftTakerAssetAmountRemaining The amount of the left taker asset that is remaining to be filled.\n    /// @param rightMakerAssetAmountRemaining The amount of the right maker asset that is remaining to be filled.\n    /// @param rightTakerAssetAmountRemaining The amount of the right taker asset that is remaining to be filled.\n    /// @return MatchFillResults struct that does not include fees paid or spreads taken.\n    function _calculateCompleteFillBoth(\n        uint256 leftMakerAssetAmountRemaining,\n        uint256 leftTakerAssetAmountRemaining,\n        uint256 rightMakerAssetAmountRemaining,\n        uint256 rightTakerAssetAmountRemaining\n    )\n        private\n        pure\n        returns (MatchedFillResults memory matchedFillResults)\n    {\n        // Calculate the fully filled results for both orders.\n        matchedFillResults.left.makerAssetFilledAmount = leftMakerAssetAmountRemaining;\n        matchedFillResults.left.takerAssetFilledAmount = leftTakerAssetAmountRemaining;\n        matchedFillResults.right.makerAssetFilledAmount = rightMakerAssetAmountRemaining;\n        matchedFillResults.right.takerAssetFilledAmount = rightTakerAssetAmountRemaining;\n\n        return matchedFillResults;\n    }\n\n    /// @dev Calculates the fill results for the maker and taker in the order matching and writes the results\n    ///      to the fillResults that are being collected on the order.\n    /// @param leftOrder The left order that is being maximally filled. All of the information about fill amounts\n    ///                  can be derived from this order and the right asset remaining fields.\n    /// @param rightMakerAssetAmountRemaining The amount of the right maker asset that is remaining to be filled.\n    /// @param rightTakerAssetAmountRemaining The amount of the right taker asset that is remaining to be filled.\n    /// @return MatchFillResults struct that does not include fees paid or spreads taken.\n    function _calculateCompleteRightFill(\n        LibOrder.Order memory leftOrder,\n        uint256 rightMakerAssetAmountRemaining,\n        uint256 rightTakerAssetAmountRemaining\n    )\n        private\n        pure\n        returns (MatchedFillResults memory matchedFillResults)\n    {\n        matchedFillResults.right.makerAssetFilledAmount = rightMakerAssetAmountRemaining;\n        matchedFillResults.right.takerAssetFilledAmount = rightTakerAssetAmountRemaining;\n        matchedFillResults.left.takerAssetFilledAmount = rightMakerAssetAmountRemaining;\n        // Round down to ensure the left maker's exchange rate does not exceed the price specified by the order.\n        // We favor the left maker when the exchange rate must be rounded and the profit is being paid in the\n        // left maker asset.\n        matchedFillResults.left.makerAssetFilledAmount = LibMath.safeGetPartialAmountFloor(\n            leftOrder.makerAssetAmount,\n            leftOrder.takerAssetAmount,\n            rightMakerAssetAmountRemaining\n        );\n\n        return matchedFillResults;\n    }\n}\n",
+		"@0x/contracts-utils/contracts/src/LibSafeMath.sol": "pragma solidity ^0.5.9;\n\nimport \"./LibRichErrors.sol\";\nimport \"./LibSafeMathRichErrors.sol\";\n\n\nlibrary LibSafeMath {\n\n    function safeMul(uint256 a, uint256 b)\n        internal\n        pure\n        returns (uint256)\n    {\n        if (a == 0) {\n            return 0;\n        }\n        uint256 c = a * b;\n        if (c / a != b) {\n            LibRichErrors.rrevert(LibSafeMathRichErrors.Uint256BinOpError(\n                LibSafeMathRichErrors.BinOpErrorCodes.MULTIPLICATION_OVERFLOW,\n                a,\n                b\n            ));\n        }\n        return c;\n    }\n\n    function safeDiv(uint256 a, uint256 b)\n        internal\n        pure\n        returns (uint256)\n    {\n        if (b == 0) {\n            LibRichErrors.rrevert(LibSafeMathRichErrors.Uint256BinOpError(\n                LibSafeMathRichErrors.BinOpErrorCodes.DIVISION_BY_ZERO,\n                a,\n                b\n            ));\n        }\n        uint256 c = a / b;\n        return c;\n    }\n\n    function safeSub(uint256 a, uint256 b)\n        internal\n        pure\n        returns (uint256)\n    {\n        if (b > a) {\n            LibRichErrors.rrevert(LibSafeMathRichErrors.Uint256BinOpError(\n                LibSafeMathRichErrors.BinOpErrorCodes.SUBTRACTION_UNDERFLOW,\n                a,\n                b\n            ));\n        }\n        return a - b;\n    }\n\n    function safeAdd(uint256 a, uint256 b)\n        internal\n        pure\n        returns (uint256)\n    {\n        uint256 c = a + b;\n        if (c < a) {\n            LibRichErrors.rrevert(LibSafeMathRichErrors.Uint256BinOpError(\n                LibSafeMathRichErrors.BinOpErrorCodes.ADDITION_OVERFLOW,\n                a,\n                b\n            ));\n        }\n        return c;\n    }\n\n    function max256(uint256 a, uint256 b)\n        internal\n        pure\n        returns (uint256)\n    {\n        return a >= b ? a : b;\n    }\n\n    function min256(uint256 a, uint256 b)\n        internal\n        pure\n        returns (uint256)\n    {\n        return a < b ? a : b;\n    }\n}\n",
+		"@0x/contracts-utils/contracts/src/LibRichErrors.sol": "/*\n\n  Copyright 2019 ZeroEx Intl.\n\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n\n*/\n\npragma solidity ^0.5.9;\n\n\nlibrary LibRichErrors {\n\n    // bytes4(keccak256(\"Error(string)\"))\n    bytes4 internal constant STANDARD_ERROR_SELECTOR =\n        0x08c379a0;\n\n    // solhint-disable func-name-mixedcase\n    /// @dev ABI encode a standard, string revert error payload.\n    ///      This is the same payload that would be included by a `revert(string)`\n    ///      solidity statement. It has the function signature `Error(string)`.\n    /// @param message The error string.\n    /// @return The ABI encoded error.\n    function StandardError(\n        string memory message\n    )\n        internal\n        pure\n        returns (bytes memory)\n    {\n        return abi.encodeWithSelector(\n            STANDARD_ERROR_SELECTOR,\n            bytes(message)\n        );\n    }\n    // solhint-enable func-name-mixedcase\n\n    /// @dev Reverts an encoded rich revert reason `errorData`.\n    /// @param errorData ABI encoded error data.\n    function rrevert(bytes memory errorData)\n        internal\n        pure\n    {\n        assembly {\n            revert(add(errorData, 0x20), mload(errorData))\n        }\n    }\n}\n",
+		"@0x/contracts-utils/contracts/src/LibSafeMathRichErrors.sol": "pragma solidity ^0.5.9;\n\n\nlibrary LibSafeMathRichErrors {\n\n    // bytes4(keccak256(\"Uint256BinOpError(uint8,uint256,uint256)\"))\n    bytes4 internal constant UINT256_BINOP_ERROR_SELECTOR =\n        0xe946c1bb;\n\n    // bytes4(keccak256(\"Uint256DowncastError(uint8,uint256)\"))\n    bytes4 internal constant UINT256_DOWNCAST_ERROR_SELECTOR =\n        0xc996af7b;\n\n    enum BinOpErrorCodes {\n        ADDITION_OVERFLOW,\n        MULTIPLICATION_OVERFLOW,\n        SUBTRACTION_UNDERFLOW,\n        DIVISION_BY_ZERO\n    }\n\n    enum DowncastErrorCodes {\n        VALUE_TOO_LARGE_TO_DOWNCAST_TO_UINT32,\n        VALUE_TOO_LARGE_TO_DOWNCAST_TO_UINT64,\n        VALUE_TOO_LARGE_TO_DOWNCAST_TO_UINT96\n    }\n\n    // solhint-disable func-name-mixedcase\n    function Uint256BinOpError(\n        BinOpErrorCodes errorCode,\n        uint256 a,\n        uint256 b\n    )\n        internal\n        pure\n        returns (bytes memory)\n    {\n        return abi.encodeWithSelector(\n            UINT256_BINOP_ERROR_SELECTOR,\n            errorCode,\n            a,\n            b\n        );\n    }\n\n    function Uint256DowncastError(\n        DowncastErrorCodes errorCode,\n        uint256 a\n    )\n        internal\n        pure\n        returns (bytes memory)\n    {\n        return abi.encodeWithSelector(\n            UINT256_DOWNCAST_ERROR_SELECTOR,\n            errorCode,\n            a\n        );\n    }\n}\n",
+		"@0x/contracts-exchange-libs/contracts/src/LibMath.sol": "/*\n\n  Copyright 2019 ZeroEx Intl.\n\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n\n*/\n\npragma solidity ^0.5.9;\n\nimport \"@0x/contracts-utils/contracts/src/LibSafeMath.sol\";\nimport \"@0x/contracts-utils/contracts/src/LibRichErrors.sol\";\nimport \"./LibMathRichErrors.sol\";\n\n\nlibrary LibMath {\n\n    using LibSafeMath for uint256;\n\n    /// @dev Calculates partial value given a numerator and denominator rounded down.\n    ///      Reverts if rounding error is >= 0.1%\n    /// @param numerator Numerator.\n    /// @param denominator Denominator.\n    /// @param target Value to calculate partial of.\n    /// @return Partial value of target rounded down.\n    function safeGetPartialAmountFloor(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (uint256 partialAmount)\n    {\n        if (isRoundingErrorFloor(\n                numerator,\n                denominator,\n                target\n        )) {\n            LibRichErrors.rrevert(LibMathRichErrors.RoundingError(\n                numerator,\n                denominator,\n                target\n            ));\n        }\n\n        partialAmount = numerator.safeMul(target).safeDiv(denominator);\n        return partialAmount;\n    }\n\n    /// @dev Calculates partial value given a numerator and denominator rounded down.\n    ///      Reverts if rounding error is >= 0.1%\n    /// @param numerator Numerator.\n    /// @param denominator Denominator.\n    /// @param target Value to calculate partial of.\n    /// @return Partial value of target rounded up.\n    function safeGetPartialAmountCeil(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (uint256 partialAmount)\n    {\n        if (isRoundingErrorCeil(\n                numerator,\n                denominator,\n                target\n        )) {\n            LibRichErrors.rrevert(LibMathRichErrors.RoundingError(\n                numerator,\n                denominator,\n                target\n            ));\n        }\n\n        // safeDiv computes `floor(a / b)`. We use the identity (a, b integer):\n        //       ceil(a / b) = floor((a + b - 1) / b)\n        // To implement `ceil(a / b)` using safeDiv.\n        partialAmount = numerator.safeMul(target)\n            .safeAdd(denominator.safeSub(1))\n            .safeDiv(denominator);\n\n        return partialAmount;\n    }\n\n    /// @dev Calculates partial value given a numerator and denominator rounded down.\n    /// @param numerator Numerator.\n    /// @param denominator Denominator.\n    /// @param target Value to calculate partial of.\n    /// @return Partial value of target rounded down.\n    function getPartialAmountFloor(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (uint256 partialAmount)\n    {\n        partialAmount = numerator.safeMul(target).safeDiv(denominator);\n        return partialAmount;\n    }\n\n    /// @dev Calculates partial value given a numerator and denominator rounded down.\n    /// @param numerator Numerator.\n    /// @param denominator Denominator.\n    /// @param target Value to calculate partial of.\n    /// @return Partial value of target rounded up.\n    function getPartialAmountCeil(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (uint256 partialAmount)\n    {\n        // safeDiv computes `floor(a / b)`. We use the identity (a, b integer):\n        //       ceil(a / b) = floor((a + b - 1) / b)\n        // To implement `ceil(a / b)` using safeDiv.\n        partialAmount = numerator.safeMul(target)\n            .safeAdd(denominator.safeSub(1))\n            .safeDiv(denominator);\n\n        return partialAmount;\n    }\n\n    /// @dev Checks if rounding error >= 0.1% when rounding down.\n    /// @param numerator Numerator.\n    /// @param denominator Denominator.\n    /// @param target Value to multiply with numerator/denominator.\n    /// @return Rounding error is present.\n    function isRoundingErrorFloor(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (bool isError)\n    {\n        if (denominator == 0) {\n            LibRichErrors.rrevert(LibMathRichErrors.DivisionByZeroError());\n        }\n\n        // The absolute rounding error is the difference between the rounded\n        // value and the ideal value. The relative rounding error is the\n        // absolute rounding error divided by the absolute value of the\n        // ideal value. This is undefined when the ideal value is zero.\n        //\n        // The ideal value is `numerator * target / denominator`.\n        // Let's call `numerator * target % denominator` the remainder.\n        // The absolute error is `remainder / denominator`.\n        //\n        // When the ideal value is zero, we require the absolute error to\n        // be zero. Fortunately, this is always the case. The ideal value is\n        // zero iff `numerator == 0` and/or `target == 0`. In this case the\n        // remainder and absolute error are also zero.\n        if (target == 0 || numerator == 0) {\n            return false;\n        }\n\n        // Otherwise, we want the relative rounding error to be strictly\n        // less than 0.1%.\n        // The relative error is `remainder / (numerator * target)`.\n        // We want the relative error less than 1 / 1000:\n        //        remainder / (numerator * denominator)  <  1 / 1000\n        // or equivalently:\n        //        1000 * remainder  <  numerator * target\n        // so we have a rounding error iff:\n        //        1000 * remainder  >=  numerator * target\n        uint256 remainder = mulmod(\n            target,\n            numerator,\n            denominator\n        );\n        isError = remainder.safeMul(1000) >= numerator.safeMul(target);\n        return isError;\n    }\n\n    /// @dev Checks if rounding error >= 0.1% when rounding up.\n    /// @param numerator Numerator.\n    /// @param denominator Denominator.\n    /// @param target Value to multiply with numerator/denominator.\n    /// @return Rounding error is present.\n    function isRoundingErrorCeil(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (bool isError)\n    {\n        if (denominator == 0) {\n            LibRichErrors.rrevert(LibMathRichErrors.DivisionByZeroError());\n        }\n\n        // See the comments in `isRoundingError`.\n        if (target == 0 || numerator == 0) {\n            // When either is zero, the ideal value and rounded value are zero\n            // and there is no rounding error. (Although the relative error\n            // is undefined.)\n            return false;\n        }\n        // Compute remainder as before\n        uint256 remainder = mulmod(\n            target,\n            numerator,\n            denominator\n        );\n        remainder = denominator.safeSub(remainder) % denominator;\n        isError = remainder.safeMul(1000) >= numerator.safeMul(target);\n        return isError;\n    }\n}\n",
+		"@0x/contracts-exchange-libs/contracts/src/LibMathRichErrors.sol": "pragma solidity ^0.5.9;\n\n\nlibrary LibMathRichErrors {\n\n    // bytes4(keccak256(\"DivisionByZeroError()\"))\n    bytes internal constant DIVISION_BY_ZERO_ERROR =\n        hex\"a791837c\";\n\n    // bytes4(keccak256(\"RoundingError(uint256,uint256,uint256)\"))\n    bytes4 internal constant ROUNDING_ERROR_SELECTOR =\n        0x339f3de2;\n\n    // solhint-disable func-name-mixedcase\n    function DivisionByZeroError()\n        internal\n        pure\n        returns (bytes memory)\n    {\n        return DIVISION_BY_ZERO_ERROR;\n    }\n\n    function RoundingError(\n        uint256 numerator,\n        uint256 denominator,\n        uint256 target\n    )\n        internal\n        pure\n        returns (bytes memory)\n    {\n        return abi.encodeWithSelector(\n            ROUNDING_ERROR_SELECTOR,\n            numerator,\n            denominator,\n            target\n        );\n    }\n}\n",
+		"src/IForwarder.sol": "pragma solidity ^0.5.17;\npragma experimental ABIEncoderV2;\n\nimport \"@0x/contracts-exchange-libs/contracts/src/LibOrder.sol\";\n\n\ninterface IForwarder {\n\n    function marketSellAmountWithEth(\n        LibOrder.Order[] calldata orders,\n        uint256 ethSellAmount,\n        bytes[] calldata signatures,\n        uint256[] calldata ethFeeAmounts,\n        address payable[] calldata feeRecipients\n    )\n        external\n        payable\n        returns (\n            uint256 wethSpentAmount,\n            uint256 makerAssetAcquiredAmount\n        );\n\n    function marketBuyOrdersWithEth(\n        LibOrder.Order[] calldata orders,\n        uint256 makerAssetBuyAmount,\n        bytes[] calldata signatures,\n        uint256[] calldata ethFeeAmounts,\n        address payable[] calldata feeRecipients\n    )\n        external\n        payable\n        returns (\n            uint256 wethSpentAmount,\n            uint256 makerAssetAcquiredAmount\n        );\n}\n"
+	},
+	"sourceTreeHashHex": "0x4d916c6843950ff7838c70e7768ec2c6bab037485fedcf5cec946ff57be3e6e0",
+	"compiler": {
+		"name": "solc",
+		"version": "soljson-v0.5.17+commit.d19bba13.js",
+		"settings": {
+			"optimizer": {
+				"enabled": true,
+				"runs": 1000000,
+				"details": {
+					"yul": true,
+					"deduplicate": true,
+					"cse": true,
+					"constantOptimizer": true
+				}
+			},
+			"outputSelection": {
+				"*": {
+					"*": [
+						"abi",
+						"devdoc",
+						"evm.bytecode.object",
+						"evm.bytecode.sourceMap",
+						"evm.deployedBytecode.object",
+						"evm.deployedBytecode.sourceMap"
+					]
+				}
+			},
+			"evmVersion": "istanbul",
+			"remappings": [
+				"@0x/contracts-exchange-libs=/home/cluracan/code/adjust-0x-api-quote/node_modules/@0x/contracts-exchange-libs",
+				"@0x/contracts-utils=/home/cluracan/code/adjust-0x-api-quote/node_modules/@0x/contracts-utils"
+			]
+		}
+	},
+	"chains": {}
+}

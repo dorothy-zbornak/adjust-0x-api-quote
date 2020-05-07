@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["es2017", "dom", "esnext.asynciterable", "es2018.promise"],
+        "experimentalDecorators": true,
+        "downlevelIteration": true,
+        "noImplicitReturns": true,
+        "pretty": true,
+        "skipLibCheck": true,
+        "typeRoots": ["node_modules/@0x/typescript-typings/types", "node_modules/@types"],
+        "strict": true,
+        // These settings are required for TypeScript project references
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "lib",
+        "rootDir": ".",
+        "resolveJsonModule": true,
+    },
+    "include": ["./src/**/*", "./test/**/*", "./generated-wrappers/**/*", "./generated-artifacts/*.json"],
+    "exclude": ["./generated-artifacts/*.input.json"]
+}
