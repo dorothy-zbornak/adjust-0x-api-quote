@@ -1,0 +1,99 @@
+{
+	"schemaVersion": "2.0.0",
+	"contractName": "IAdjustZeroExApiQuote",
+	"compilerOutput": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "callData",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fillAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "adjustFillAmount",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"payable": false,
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"evm": {
+			"bytecode": {
+				"linkReferences": {},
+				"object": "0x",
+				"opcodes": "",
+				"sourceMap": ""
+			},
+			"deployedBytecode": {
+				"linkReferences": {},
+				"object": "0x",
+				"opcodes": "",
+				"sourceMap": ""
+			}
+		}
+	},
+	"sources": {
+		"src/IAdjustZeroExApiQuote.sol": {
+			"id": 1
+		}
+	},
+	"sourceCodes": {
+		"src/IAdjustZeroExApiQuote.sol": "pragma solidity ^0.5.17;\n\n\ninterface IAdjustZeroExApiQuote {\n\n    function adjustFillAmount(\n        address target,\n        bytes calldata callData,\n        uint256 fillAmount\n    )\n        external\n        pure\n        returns (bytes memory);\n}\n"
+	},
+	"sourceTreeHashHex": "0xcfe9149003d275e7d71285aeda9cf600bfaa3185463d0c8267e56594d17aceb0",
+	"compiler": {
+		"name": "solc",
+		"version": "soljson-v0.5.17+commit.d19bba13.js",
+		"settings": {
+			"optimizer": {
+				"enabled": true,
+				"runs": 1000000,
+				"details": {
+					"yul": true,
+					"deduplicate": true,
+					"cse": true,
+					"constantOptimizer": true
+				}
+			},
+			"outputSelection": {
+				"*": {
+					"*": [
+						"abi",
+						"devdoc",
+						"evm.bytecode.object",
+						"evm.bytecode.sourceMap",
+						"evm.deployedBytecode.object",
+						"evm.deployedBytecode.sourceMap"
+					]
+				}
+			},
+			"evmVersion": "istanbul",
+			"remappings": [
+				"@0x/contracts-utils=/home/cluracan/code/adjust-0x-api-quote/node_modules/@0x/contracts-utils",
+				"@0x/contracts-exchange-libs=/home/cluracan/code/adjust-0x-api-quote/node_modules/@0x/contracts-exchange-libs"
+			]
+		}
+	},
+	"chains": {}
+}

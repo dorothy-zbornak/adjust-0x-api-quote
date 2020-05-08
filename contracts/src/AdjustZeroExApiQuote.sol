@@ -3,9 +3,12 @@ pragma solidity ^0.5.17;
 import "@0x/contracts-utils/contracts/src/LibBytes.sol";
 import "./IExchange.sol";
 import "./IForwarder.sol";
+import "./IAdjustZeroExApiQuote.sol";
 
 
-contract AdjustZeroExApiQuote {
+contract AdjustZeroExApiQuote is
+    IAdjustZeroExApiQuote
+{
 
     address private constant FORWARDER_ADDRESS = 0x6958F5e95332D93D21af0D7B9Ca85B8212fEE0A5;
     address private constant EXCHANGE_ADDRESS = 0x61935CbDd02287B511119DDb11Aeb42F1593b7Ef;
