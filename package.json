@@ -23,7 +23,7 @@
         "@0x/contracts-utils": "^4.4.3",
         "@0x/sol-compiler": "^4.0.8",
         "@0x/typescript-typings": "^5.0.2",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.19",
         "mocha": "^7.1.2",
         "typescript": "^3.8.3"
     }
