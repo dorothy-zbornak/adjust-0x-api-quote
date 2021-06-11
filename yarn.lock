@@ -72,65 +72,6 @@
     ethereum-types "^3.1.0"
     ethers "~4.0.4"
 
-"@0x/contracts-asset-proxy@^3.2.5":
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-asset-proxy/-/contracts-asset-proxy-3.2.5.tgz#6933753ffeb56e35b42ace3b8ff5ea45d58924cc"
-  integrity sha512-YXxbnCOpO2gDEcoKyd11RKMfDGThDNGbiXoCZ+5S1okFM3Jse4rXGIayj06+8caZ1saYHb2Tk5OYI16+5hoiZA==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-    "@0x/contracts-erc1155" "^2.1.5"
-    "@0x/contracts-erc20" "^3.1.5"
-    "@0x/contracts-erc721" "^3.1.5"
-    "@0x/contracts-exchange-libs" "^4.3.5"
-    "@0x/order-utils" "^10.2.4"
-    "@0x/types" "^3.1.2"
-    "@0x/typescript-typings" "^5.0.2"
-    "@0x/utils" "^5.4.1"
-    "@0x/web3-wrapper" "^7.0.7"
-    ethereum-types "^3.1.0"
-    lodash "^4.17.11"
-
-"@0x/contracts-dev-utils@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-dev-utils/-/contracts-dev-utils-1.3.3.tgz#3bb8e34662d0e9432dbd1b0417c7c9f6a9668dd9"
-  integrity sha512-s+hqP7oFbvlek9BZMMcdzodvyWI/FZRZz6rTsiTEZGgo0RPcjFafuwQA31PopM4a/rx4MYN/jReCASubLxsCoA==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-
-"@0x/contracts-erc1155@^2.1.5":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-erc1155/-/contracts-erc1155-2.1.5.tgz#746c3d1ecb95a91076606e81ae0fe8d8b87cc7f8"
-  integrity sha512-IrUw7R/UqWFiKzDjcpe59TQYAcCmHE3CtTEWoWSY/SU9CamtIFOW1Fog9dq2wIlXvCtaWA9dlAwc0KQ/M9ZIxA==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-    "@0x/contracts-test-utils" "^5.3.2"
-    "@0x/utils" "^5.4.1"
-    "@0x/web3-wrapper" "^7.0.7"
-    lodash "^4.17.11"
-
-"@0x/contracts-erc20@^3.1.5":
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-erc20/-/contracts-erc20-3.1.5.tgz#92f0955a5920372ab064af4be8b4a4fdd8440a8e"
-  integrity sha512-gM6yOjUeyKbTJ36TzeQCnJh3MPn1an6choh3nHuWEGYy6zwyZZvGtlJnE0pm4ectfW4E/JunNtPdMrKUr6bjrQ==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-
-"@0x/contracts-erc721@^3.1.5":
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-erc721/-/contracts-erc721-3.1.5.tgz#15ecb70a20b1e57dc8eded1a52492b462320c0f3"
-  integrity sha512-puwW9gRUIz37Wkw71fkX29Ck5UcthqRxmRI/NwfybxJrhtqEuyJ2ZUeucxt+7Co4VXnWqVgWlZ5ragfPO259lg==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-
-"@0x/contracts-exchange-forwarder@^4.2.5":
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-exchange-forwarder/-/contracts-exchange-forwarder-4.2.5.tgz#ada9ff4a1dea44c74ceb2c680bbc895064cf459e"
-  integrity sha512-4o1mmSDAXvRk1Cy9b2TFHDpXLqsU7PAhcc28XpFdCN71xHLIhy63JMVSHJSugMNVl7PViHN8UcGHXp3QoFNI+w==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-    "@0x/typescript-typings" "^5.0.2"
-    ethereum-types "^3.1.0"
-
 "@0x/contracts-exchange-libs@^4.3.5":
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/@0x/contracts-exchange-libs/-/contracts-exchange-libs-4.3.5.tgz#aa57b18802816894b2795415ee25dd564e54796c"
@@ -143,29 +84,6 @@
     "@0x/types" "^3.1.2"
     "@0x/typescript-typings" "^5.0.2"
     "@0x/utils" "^5.4.1"
-    ethereum-types "^3.1.0"
-
-"@0x/contracts-exchange@^3.2.5":
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-exchange/-/contracts-exchange-3.2.5.tgz#c59ba9688aa3fcbb3901d56008c77901f0508ebc"
-  integrity sha512-/WRuIMVRrt5P+gSglQuEAb9vRNp+K4ch5bEsG/X8yYuJ521+kQvqXXdf8W1myEwXWfAED+/xjuJELQifp6/G3A==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-    "@0x/contracts-dev-utils" "^1.3.3"
-    "@0x/contracts-erc1155" "^2.1.5"
-    "@0x/contracts-erc20" "^3.1.5"
-    "@0x/contracts-erc721" "^3.1.5"
-    "@0x/order-utils" "^10.2.4"
-    "@0x/utils" "^5.4.1"
-    lodash "^4.17.11"
-
-"@0x/contracts-extensions@^6.1.5":
-  version "6.1.5"
-  resolved "https://registry.yarnpkg.com/@0x/contracts-extensions/-/contracts-extensions-6.1.5.tgz#ab9cf7f3fcfa067230c65697dd33e94a4031992c"
-  integrity sha512-J9iRnnrSGkUOb0odx+wLRWInKZwIxJ6MCX2ffHsExbOU9xgSDNvkKBQwyIbfoY2x8YmllPs8rf8gjYJRDvkzfQ==
-  dependencies:
-    "@0x/base-contract" "^6.2.1"
-    "@0x/typescript-typings" "^5.0.2"
     ethereum-types "^3.1.0"
 
 "@0x/contracts-test-utils@^5.3.2":
@@ -5820,9 +5738,9 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
 normalize-url@^4.1.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
-  integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.1.tgz#0dd90cf1288ee1d1313b87081c9a5932ee48518a"
+  integrity sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==
 
 now-and-later@^2.0.0:
   version "2.0.1"
